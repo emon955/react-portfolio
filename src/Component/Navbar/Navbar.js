@@ -12,8 +12,8 @@ const Navbar = () => {
             <Link to="/" className='home'><li>Home</li></Link>
             <Link to="/about" className='about'><li>About</li></Link>
             <Link to="/contact" className='contact'><li>Contact</li></Link>
-            <Link to="/skill" className='skill'><li>Skill</li></Link>
-            <Link to="/signup" className='signup'><li>SignUp</li></Link>
+            {/* <Link to="/skill" className='skill'><li>Skill</li></Link> */}
+            {/* <Link to="/signup" className='signup'><li>SignUp</li></Link> */}
         </ul>
         <button className='mobile-menu-icon'
         onClick={()=> setMobile(!isMobile)}
