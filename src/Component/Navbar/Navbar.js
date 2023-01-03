@@ -9,6 +9,8 @@ const Navbar = () => {
   const [isMobile, setMobile] = useState(false)
   return (
     <nav className='navbar'>
+      <div className='container'>
+        <div className='row'>
       <div className='logo'>
         <Link to="/"><li><img src="https://flone.jamstacktemplates.dev/assets/img/logo/logo.png" /></li></Link>
       </div>
@@ -33,6 +35,8 @@ const Navbar = () => {
       >
         {isMobile ? (<i className='fas fa-times'></i>) : (<i className='fas fa-bars'></i>)}
       </button>
+      </div>
+    </div>
     </nav>
   )
 }
