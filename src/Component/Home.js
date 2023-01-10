@@ -1,9 +1,9 @@
 import React from 'react'
-import Banner from './Banner'
+import Slider from './banner/Slider'
 const Home = () => {
   return (
      <div>
-         <Banner />
+         <Slider />
      </div>
   )
 }
