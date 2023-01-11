@@ -1,0 +1,90 @@
+.product-section{
+    width: 100%;
+}
+.product-section .product-container{
+    width: 90%;
+    margin: 0 auto;
+}
+.product-section .product-container .product-row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+.product-section .product-container .product-row .product-box{
+    width: 23%;
+    overflow: hidden;
+}
+.product-section .product-container .product-row .product-box .product-imge{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.product-section .product-container .product-row .product-box .product-imge .product-functionality{
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    background-color: #a749ff;
+    transition: all .5s ease;
+}
+.product-section .product-container .product-row .product-box .product-imge .img-box img{
+    width: 100%;
+
+}
+.whilelsit{
+    width: 15%;
+    border-right: 1px solid hsla(0,0%,100%,.2);
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #a749ff;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+.add-remove-btn{
+    width: 70%;
+    border-right: 1px solid hsla(0,0%,100%,.2);
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .5s ease;
+    text-transform: capitalize;
+    font-size: 16px;
+}
+.quick-view{
+    width: 15%;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+button{
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+.add-remove-btn:hover{
+    background-color: #000;
+    color: #fff;
+}
+.whilelsit:hover{
+    background-color: #000;
+    color: #fff;
+}
+.quick-view:hover{
+    background-color: #000;
+    color: #fff;
+}
+.product-section .product-container .product-row .product-box:hover .product-functionality{
+   bottom: 0;
+}
