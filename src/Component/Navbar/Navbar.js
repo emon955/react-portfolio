@@ -19,7 +19,7 @@ const Navbar = () => {
     // productDispatch,
   } = CartState()
   const [isMobile, setMobile] = useState(false)
-  const [toggle, setToggle] = useState(true)
+  const [toggle, setToggle] = useState(false)
   const handleClick = () => {
     setToggle(!toggle);
   };
