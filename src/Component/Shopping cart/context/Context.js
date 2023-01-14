@@ -13,26 +13,26 @@ const Context = ({ children }) => {
         },
         {
            id:"2",
-           title:"Lorem ipsum fashion female top",
+           title:"Lorem ipsum fashion jacket",
            rating:[1,2,3,4,5],
            price:"$45",
            instock:([]),
-           img:'https://flone.jamstacktemplates.dev/assets/img/product/fashion/9.jpg'
+           img:'https://flone.jamstacktemplates.dev/assets/img/product/fashion/6.jpg'
         },
         {
            id:"3",
-           title:"Lorem ipsum fashion female top",
+           title:"Lorem ipsum kids eight",
            rating:[1,2,3,4,5],
            price:"$45",
            inStock:([1,2,3,4]),
-           img:'https://flone.jamstacktemplates.dev/assets/img/product/fashion/9.jpg'
+           img:'https://flone.jamstacktemplates.dev/assets/img/product/fashion/23.jpg'
         },
         {
            id:"4",
-           title:"Lorem ipsum fashion female top",
+           title:"Lorem ipsum jacket",
            rating:[1,2,3,4,5],
            price:"$45",
-           img:'https://flone.jamstacktemplates.dev/assets/img/product/fashion/9.jpg'
+           img:'https://flone.jamstacktemplates.dev/assets/img/product/fashion/3.jpg'
         },
         {
            id:"5",
@@ -40,31 +40,31 @@ const Context = ({ children }) => {
            rating:[1,2,3,4,5],
            price:"$45",
            inStock:([1,2,3,4]),
-           img:'https://flone.jamstacktemplates.dev/assets/img/product/fashion/9.jpg'
+           img:'https://flone.jamstacktemplates.dev/assets/img/product/fashion/29.jpg'
         },
         {
            id:"6",
-           title:"Lorem ipsum fashion female top",
+           title:"Lorem ipsum kids six",
            rating:[1,2,3,4,5],
            price:"$45",
            inStock:([1,2,3,4]),
-           img:'https://flone.jamstacktemplates.dev/assets/img/product/fashion/9.jpg'
+           img:'https://flone.jamstacktemplates.dev/assets/img/product/fashion/5.jpg'
         },
         {
            id:"7",
-           title:"Lorem ipsum fashion female top",
+           title:"Lorem ipsum kids seven",
            rating:[1,2,3,4,5],
            price:"$45",
            inStock:([1,2,3,4]),
-           img:'https://flone.jamstacktemplates.dev/assets/img/product/fashion/9.jpg'
+           img:'https://flone.jamstacktemplates.dev/assets/img/product/fashion/30.jpg'
         },
         {
            id:"8",
-           title:"Lorem ipsum fashion female top",
+           title:"Lorem ipsum jacket",
            rating:[1,2,3,4,5],
            price:"$45",
            inStock:([1,2,3,4]),
-           img:'https://flone.jamstacktemplates.dev/assets/img/product/fashion/9.jpg'
+           img:'https://flone.jamstacktemplates.dev/assets/img/product/fashion/3.jpg'
         },
      ];
     const [state, dispatch] = useReducer(cartReducer, {

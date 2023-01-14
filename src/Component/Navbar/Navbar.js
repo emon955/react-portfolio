@@ -5,6 +5,7 @@ import { BiUser } from 'react-icons/bi';
 import { BiGitCompare } from 'react-icons/bi';
 import { GoThreeBars } from 'react-icons/go';
 import { BsCart2 } from 'react-icons/bs';
+import { RxCross2 } from 'react-icons/rx';
 import { CartState } from '../Shopping cart/context/Context'
 import {
   Badge,
@@ -24,7 +25,7 @@ const Navbar = () => {
     setToggle(!toggle);
   };
   return (
-    <nav className='navbar'>
+    <header>
       <div className='container'>
         <div className='row'>
           <div className='logo'>
@@ -47,14 +48,35 @@ const Navbar = () => {
             <button onClick={handleClick} className='cart-btn'><BsCart2 /><span className='count'>{cart.length > 0? cart.length : 0}</span></button>
           </div>
           <div className='shopping-cart' style={{ display: toggle ? 'block' : 'none' }}>
-             <span>No item added to cart</span>
+            {cart.length > 0 ? (
+              <div className='cart-addded-item'>
+                  <ul >
+                      {cart.map((prod)=>(
+                        <li>
+                            <div className='product-img'>
+                                <img src={prod.img} />
+                            </div>
+                            <div className='product-title'>
+                                {prod.title}
+                            </div>
+                            <div className='product-delete'>
+                                <RxCross2 />
+                            </div>
+                        </li>
+                      ))}
+                  </ul>
+              </div>
+            ) : (
+              <span className='no-item'>No item added to cart</span>
+            )}
+             
           </div>
           <div className='mobile-menu-icon'>
             <GoThreeBars onClick={() => setMobile(true)} />
           </div>
         </div>
       </div>
-    </nav>
+    </header>
   )
 }
 
