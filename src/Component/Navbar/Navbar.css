@@ -17,14 +17,11 @@ body{
 .logo{
     list-style: none;
 }
-.navbar {
-  padding: 12px 0px;
-}
 header{
   position: relative;
   width: 100%;
   z-index: 100;
-  background-color: #fff;
+  background-color: red;
   padding: 15px 0px;
 }
 .header a li{
