@@ -32,8 +32,8 @@ const SingleProduct = ({ prod }) => {
                                     Remove from Cart
                                 </div>
                             ) : (
-                                <button
-                                    onClick={() =>
+                                <button className="add-to-cart-btn"
+                                        onClick={() =>
                                         dispatch({
                                             type: "ADD_TO_CART",
                                             payload: prod,

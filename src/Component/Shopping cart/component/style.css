@@ -66,7 +66,7 @@
     cursor: pointer;
     transition: all .5s ease;
 }
-button{
+.add-to-cart-btn{
     background: transparent;
     border: none;
     color: #fff;
