@@ -11,11 +11,7 @@ import { RxCross2 } from 'react-icons/rx';
 import { BiSearch } from 'react-icons/bi';
 import { MdMinimize } from 'react-icons/md';
 import { CartState } from '../Shopping cart/context/Context'
-// import {
-//   Badge,
-//   Dropdown,
-//   Button
-// } from "react-bootstrap";
+import Cart from '../Cart/Cart';
 import "./Navbar.css"
 const Navbar = () => {
   const {
@@ -45,7 +41,9 @@ const Navbar = () => {
     console.log(stickyClass);
   };
   const classes = `${sticky}`;
-
+  const inputDefault = () => {
+    return false
+  };
   const [myclass, changeclass] = useState(false);
   const addclass=()=>{
   changeclass(current=>!current)
@@ -79,7 +77,6 @@ const Navbar = () => {
  const expandminimizefuncthird=()=>{
   setexpandminimizethird(current=>!current)
 }
-
   return (
     <header className={classes}>
       <div className='container'>
@@ -98,7 +95,7 @@ const Navbar = () => {
               <div className='nav-links-items'>
                 <div className='mobile-searc-area'>
                   <form >
-                    <input onClick="return false"  placeholder="search" />
+                    <input onClick={inputDefault}placeholder="search" />
                     <button><BiSearch /></button>
                   </form>
                 </div>
@@ -177,6 +174,9 @@ const Navbar = () => {
                     </li>
                   ))}
                 </ul>
+                <div className='shopping-cart-btn'>
+                    <Link to="/cart">View Cart</Link>
+                </div>
               </div>
             ) : (
               <span className='no-item'>No item added to cart</span>

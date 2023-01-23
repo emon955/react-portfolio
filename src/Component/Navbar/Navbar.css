@@ -219,6 +219,26 @@ header{
 .home-grp-plus{
   display: none;
 }
+.shopping-cart-btn{
+  margin-top: 23px;
+  text-align: center!important;
+}
+.shopping-cart-btn a{
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  padding: 16px 40px 17px;
+  border: 1px solid #333;
+  color: #010101;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition:  all .5s ease-in-out 0s;
+}
+.shopping-cart-btn a:hover{
+  background-color: #6610f2;
+  color: #fff;
+}
 @media screen and (max-width:700px){
     .nav-links{
         display: none;

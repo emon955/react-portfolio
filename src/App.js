@@ -9,6 +9,7 @@ import Home from './Component/Home';
 import Navbar from './Component/Navbar/Navbar';
 import SignUp from './Component/SignUp';
 import Skill from './Component/Skill';
+import Cart from './Component/Cart/Cart';
 function App() {
   return (
     <HashRouter>
@@ -19,6 +20,7 @@ function App() {
         <Route path="contact" element={<Contact />} />
         <Route path="skill" element={<Skill />} />
         <Route path="signup" element={<SignUp />} />
+        <Route path="cart" element={<Cart />} />
       </Routes>
     </HashRouter>
   );
