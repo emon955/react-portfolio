@@ -43,7 +43,7 @@ const Context = ({ children }) => {
            id:"5",
            title:"Lorem ipsum fashion female top",
            rating:[1,2,3,4,5],
-           price:"$45",
+           price:"$30",
            size:['x','xl','m'],
            inStock:['1','2','3','4'],
            img:'https://flone.jamstacktemplates.dev/assets/img/product/fashion/29.jpg'
@@ -52,7 +52,7 @@ const Context = ({ children }) => {
            id:"6",
            title:"Lorem ipsum kids six",
            rating:[1,2,3,4,5],
-           price:"$45",
+           price:"$36",
            size:['x','xl','m'],
            inStock:['1','2','3','4'],
            img:'https://flone.jamstacktemplates.dev/assets/img/product/fashion/5.jpg'
@@ -61,7 +61,7 @@ const Context = ({ children }) => {
            id:"7",
            title:"Lorem ipsum kids seven",
            rating:[1,2,3,4,5],
-           price:"$45",
+           price:"$75",
            size:['x','xl','m'],
            inStock:['1','2','3','4'],
            img:'https://flone.jamstacktemplates.dev/assets/img/product/fashion/30.jpg'
@@ -70,7 +70,7 @@ const Context = ({ children }) => {
            id:"8",
            title:"Lorem ipsum jacket",
            rating:[1,2,3,4,5],
-           price:"$45",
+           price:"$34",
            size:['x','xl','m'],
            inStock:['1','2','3','4'],
            img:'https://flone.jamstacktemplates.dev/assets/img/product/fashion/3.jpg'
