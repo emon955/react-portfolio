@@ -7,6 +7,7 @@ import { BiGitCompare } from 'react-icons/bi';
 import { GoThreeBars } from 'react-icons/go';
 import { BsCart2 } from 'react-icons/bs';
 import { IoMdClose } from 'react-icons/io';
+import { FiChevronDown } from 'react-icons/fi';
 import { RxCross2 } from 'react-icons/rx';
 import { BiSearch } from 'react-icons/bi';
 import { MdMinimize } from 'react-icons/md';
@@ -79,8 +80,8 @@ const Navbar = () => {
 }
   return (
     <header className={classes}>
-      <div className='container'>
-        <div className='row'>
+      <div className='nav-container'>
+        <div className='nav-row'>
           <div className='logo'>
             <Link to="/"><li><img src="https://flone.jamstacktemplates.dev/assets/img/logo/logo.png" /></li></Link>
           </div>
@@ -102,6 +103,7 @@ const Navbar = () => {
                 <ul className='nav-ul'>
                   <li >
                     <Link to="/" className=' item'>home</Link>
+                    <div className='down-menu'><FiChevronDown /></div>
                     <span onClick={expandminimizefunc}>{expandminimize ?(<MdMinimize onClick={addclass} />):(<AiOutlinePlus onClick={addclass} />)}</span>
                     <ul id={myclass?"active":""}  className='inner-menu inner-menu-padding'>
                       <li>

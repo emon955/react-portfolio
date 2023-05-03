@@ -169,11 +169,14 @@
     height: 83px;
   }
   .summary {
-    width: 90%;
+    width: 94%!important;
     margin: 0 auto;
   }
   
  .filters {
   height: 32vh;
   }
+  .productContainer {
+    padding: 20px;
+}
 }

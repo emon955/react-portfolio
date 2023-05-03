@@ -49,6 +49,11 @@ const SingleProduct = ({ prod }) => {
                             <AiFillEye />
                         </div>
                     </div>
+                    <div className='product-image-batch'>
+                        {/* <span className='pink'>
+                            {prod.imagebatch}
+                        </span> */}
+                    </div>
                 </div>
                 <div className='product-details'>
                     <div>{prod.title}</div>

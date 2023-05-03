@@ -240,7 +240,7 @@
     height: 612px;
 }
  .slider-container section .row{
-  flex-direction:column
+  /* flex-direction:column; */
 }
 .slider-container section .row .left-div h1{
   font-size: 33px;

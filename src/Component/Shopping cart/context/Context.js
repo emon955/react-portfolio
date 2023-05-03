@@ -19,6 +19,7 @@ const Context = ({ children }) => {
            price:"$45",
            size:['x','xl','m'],
            inStock:false,
+           imagebatch:'10%',
            img:'https://flone.jamstacktemplates.dev/assets/img/product/fashion/6.jpg'
         },
         {

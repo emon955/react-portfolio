@@ -22,7 +22,7 @@ body{
   padding-top: 5px;
   padding-bottom: 5px;
 }
-.row {
+.nav-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -41,7 +41,7 @@ header{
   padding: 0 15px;
   list-style: none;
 }
-.container {
+.nav-container {
   width: 86%;
   margin: 0 auto;
 }
@@ -199,6 +199,11 @@ header{
  .inner-menu li a{
   text-decoration: none;
 }
+.down-menu{
+  position: absolute;
+  top: 4px;
+  right: 8px;
+}
 .inner-menu-title{
     color: #242424;
     font-size: 14px;
@@ -209,7 +214,7 @@ header{
 .nav-links .inner-menu li:hover{
   list-style: disc;
 }
-.nav-ul li{
+ul li{
   list-style: none;
   position: relative;
 }
