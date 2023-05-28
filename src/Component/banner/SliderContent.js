@@ -12,7 +12,7 @@ function SliderContent({ activeIndex, sliderImage }) {
             <div className="left-div">
               <h3>{slide.title}</h3>
               <h1>{slide.title2} <br/>{slide.title3}</h1>
-              <Link to="/">SHOP NOW</Link>
+              <Link className='shop-now' to="/">SHOP NOW</Link>
             </div>
             <div className="right-div">
                 <img src={slide.urls} />

@@ -3,14 +3,14 @@ const Rating = ({ rating}) => {
   return (
     <>
       {rating?.map((_, i) => (
-           <span key={i}>
+           <span className="star" key={i}>
            {rating > i ? (
-             <AiFillStar fontSize="15px" />
+             <AiFillStar  fontSize="15px" />
            ) : (
              <AiFillStar fontSize="15px" />
            )}
            </span>
-      ))};
+      ))}
     </>
     );
 };

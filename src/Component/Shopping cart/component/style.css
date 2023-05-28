@@ -73,6 +73,13 @@
     font-size: 16px;
     text-transform: capitalize;
 }
+.remove_from_cart{
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    text-transform: capitalize;
+}
 .add-remove-btn:hover{
     background-color: #000;
     color: #fff;
@@ -110,6 +117,9 @@
     margin: 0 15px;
     font-size: 30px;
     font-weight: 600;
+}
+.star{
+    color: #ffe234;
 }
 @media screen and (max-width:500px){
     .section-title{

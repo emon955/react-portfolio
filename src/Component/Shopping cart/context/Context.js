@@ -1,5 +1,6 @@
 import React,{createContext,useReducer,useContext} from 'react'
 import { cartReducer} from "./Reducer";
+import { whillistReducer} from "./Reducer";
 export const Cart = createContext();
 const Context = ({ children }) => {
     const products = [
@@ -62,7 +63,7 @@ const Context = ({ children }) => {
            id:"7",
            title:"Lorem ipsum kids seven",
            rating:[1,2,3,4,5],
-           price:"$75",
+           price:"$75.78",
            size:['x','xl','m'],
            inStock:['1','2','3','4'],
            img:'https://flone.jamstacktemplates.dev/assets/img/product/fashion/30.jpg'
@@ -80,9 +81,13 @@ const Context = ({ children }) => {
     const [state, dispatch] = useReducer(cartReducer, {
         products: products,
         cart: [],
+        whillist:[],
+    });
+    const [whilliststate, dispatchWhillist] = useReducer(whillistReducer, {
+        whillist:[],
     });
     return (
-        <Cart.Provider value={{state,dispatch}}>
+        <Cart.Provider value={{state,dispatch,whilliststate,dispatchWhillist}}>
             {children}
         </Cart.Provider>
     )
