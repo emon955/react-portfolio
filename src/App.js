@@ -10,6 +10,8 @@ import Navbar from './Component/Navbar/Navbar';
 import SignUp from './Component/SignUp';
 import Skill from './Component/Skill';
 import Cart from './Component/Cart/Cart';
+import Wishlist from './Component/wishlist/Wishlist';
+import Footer from './Component/footer/Footer';
 function App() {
   return (
     <HashRouter>
@@ -20,7 +22,13 @@ function App() {
         <Route path="contact" element={<Contact />} />
         <Route path="skill" element={<Skill />} />
         <Route path="signup" element={<SignUp />} />
-        <Route path="cart" element={<Cart />} />
+        <Route path="cart" element={<>
+        <Cart/>
+        <Footer/>
+        </>} />
+        <Route path="wishlist" element={<><Wishlist />
+        <Footer/>
+        </>} />
       </Routes>
     </HashRouter>
   );

@@ -159,7 +159,7 @@ const Navbar = () => {
             <button className='search-btn'><BsSearch /></button>
             <button className='user-btn'><BiUser /></button>
             <button className='compare-btn'><BiGitCompare /><span className='count'>0</span></button>
-            <button onClick={handleClickwhillist} className='heart-btn'><BsHeart /><span className='count'>{whillist.length > 0 ? whillist.length : 0}</span></button>
+            <button className='heart-btn'><Link to="/wishlist"><BsHeart /> <span className='count'>{whillist.length > 0 ? whillist.length : 0}</span></Link></button>
             <button onClick={handleClick} className='cart-btn'><BsCart2 /><span className='count'>{cart.length > 0 ? cart.length : 0}</span></button>
           </div>
           <div className='shopping-cart' style={{ display: toggle ? 'block' : 'none' }}>
@@ -217,7 +217,7 @@ const Navbar = () => {
                   ))}
                 </ul>
                 <div className='shopping-cart-btn'>
-                  <Link onClick={handleClick} to="/cart">View whillist</Link>
+                  <Link onClick={handleClick} to="/wishlist">View whillist</Link>
                 </div>
               </div>
             ) : (

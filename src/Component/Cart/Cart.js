@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Button, Col, Form, Image, ListGroup, Row } from "react-bootstrap";
 import { IoMdClose } from 'react-icons/io';
 import { CartState } from '../Shopping cart/context/Context';
-import Rating from '../Shopping cart/component/Rating';
+import EmptyCart from './EmptyCart';
 const Cart = () => {
     const {
         state: { cart },
@@ -19,6 +19,9 @@ const Cart = () => {
         setTotal(newTotal);
     }, [cart]);
     return (
+        cart.length === 0 ? (
+           <EmptyCart />
+        ):(
         <div className="home">
             <div className="productContainer">
                 <section>
@@ -102,7 +105,8 @@ const Cart = () => {
                     Proceed to Checkout
                 </Button>
             </div>
-        </div>
+        </div>)
+    
     )
 }
 
