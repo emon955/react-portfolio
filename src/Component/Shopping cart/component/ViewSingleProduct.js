@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
 import { useParams } from "react-router-dom"
 import { CartState } from '../context/Context';
-import { FaStar, FaRegStar } from 'react-icons/fa';
-import { BsHeart } from 'react-icons/bs';
+import { FaStar, FaRegStar,FaFacebookF } from 'react-icons/fa';
+import { BsHeart} from 'react-icons/bs';
 import { BiGitCompare } from 'react-icons/bi';
+import { AiOutlineDribbble,AiOutlineTwitter } from 'react-icons/ai';
+import { FaPinterestP } from 'react-icons/fa';
+import { AiFillLinkedin } from 'react-icons/ai';
+
 import './viewsingleproduct.css'
+
 function ViewSingleProduct() {
-  const { productId } = useParams()
+  const { productId } = useParams()  
   const {
     state: { products },
     state: { cart },
@@ -103,6 +108,22 @@ function ViewSingleProduct() {
               <ul>
                 <li><a href="/">fashion</a>
                 </li><li><a href="/">women</a></li>
+              </ul>
+            </div>
+            <div class="pro-details-tag">
+              <span>Tags :</span>
+              <ul>
+                <li><a href="/shop-grid-standard">fashion</a>
+                </li><li><a href="/shop-grid-standard">kids</a></li>
+              </ul>
+            </div>
+            <div class="pro-details-social">
+              <ul>
+                <li><a href="//facebook.com"><FaFacebookF /></a></li>
+                <li><a href="//dribbble.com"><AiOutlineDribbble /></a></li>
+                <li><a href="//pinterest.com"><FaPinterestP /></a></li>
+                <li><a href="//twitter.com"><AiOutlineTwitter /></a></li>
+                <li><a href="//linkedin.com"><AiFillLinkedin /></a></li>
               </ul>
             </div>
           </div>
