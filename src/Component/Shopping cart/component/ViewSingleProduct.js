@@ -1,17 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom"
 import { CartState } from '../context/Context';
-import { FaStar, FaRegStar,FaFacebookF } from 'react-icons/fa';
-import { BsHeart} from 'react-icons/bs';
+import { FaStar, FaRegStar, FaFacebookF } from 'react-icons/fa';
+import { BsHeart } from 'react-icons/bs';
 import { BiGitCompare } from 'react-icons/bi';
-import { AiOutlineDribbble,AiOutlineTwitter } from 'react-icons/ai';
+import { AiOutlineDribbble, AiOutlineTwitter } from 'react-icons/ai';
 import { FaPinterestP } from 'react-icons/fa';
 import { AiFillLinkedin } from 'react-icons/ai';
-
+import { Link } from 'react-router-dom';
 import './viewsingleproduct.css'
-
+import ItemDetail1 from './ItemDetail1';
+// import ItemDetail2 from './ItemDetail2';
+// import ItemDetail3 from './ItemDetail3';
 function ViewSingleProduct() {
-  const { productId } = useParams()  
+  const { productId } = useParams()
   const {
     state: { products },
     state: { cart },
@@ -19,13 +21,34 @@ function ViewSingleProduct() {
   } = CartState();
   const thisProduct = products.find(prod => prod.id === productId)
   const [currentIndex, setCurrentIndex] = useState(0);
+
   const [topImage, setTopImage] = useState(thisProduct.img);
   const handleBottomImageClick = (image, clickedIndex) => {
     setTopImage(image);
     setCurrentIndex(clickedIndex);
   };
-  const fullStar = '★';
-  const emptyStar = '☆';
+  const [selectedItem, setSelectedItem] = useState(null);
+  const [items, setItems] = useState([]);
+  useEffect(() => {
+    // Set the initial selected item
+    setSelectedItem(1);
+
+    // Fetch items from the JSON data
+    const itemsFromData = thisProduct.description_review_item.map((item, index) => ({
+      id: index + 1,
+      ...item
+    }));
+    setItems(itemsFromData);
+  }, []);
+  // const handleClick = (itemId) => {
+  //   setSelectedItem(itemId);
+  // };
+
+  const handleTopbarClick = (index) => {
+    setSelectedItem(index + 1);
+   
+  };
+  //  console.log(selectedItem)
   return (
     <div className='product-detailsSection'>
       <div className='product-container'>
@@ -125,6 +148,35 @@ function ViewSingleProduct() {
                 <li><a href="//twitter.com"><AiOutlineTwitter /></a></li>
                 <li><a href="//linkedin.com"><AiFillLinkedin /></a></li>
               </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className='description-review-area'>
+        <div className='container'>
+          <div className='description-review-wrapper'>
+            <div className='description-review-top-container'>
+              <div className='description-review-top nav'>
+                <ul>
+                  {thisProduct.description_review_topbar.map((topbarItem, index) => (
+                    <li key={index}>
+                      <Link
+                        to=''
+                        onClick={() => handleTopbarClick(index)}
+                        className={selectedItem === index + 1 ? 'selected-item' : ''}
+                      >
+                        {topbarItem}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div className='description-review-bottom'>
+              {items.map((item,index) => (
+                <ItemDetail1 key={item.id} item={item} selected={selectedItem === item.id ? selectedItem : null}/>
+              ))}
             </div>
           </div>
         </div>

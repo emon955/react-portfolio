@@ -1,0 +1,13 @@
+import React from 'react';
+const ItemDetail3 = () => {
+    return (
+        // <div style={{ display: selected ? 'block' : 'none' }}>
+        <div>
+            <ul>
+                <li>nice</li>
+            </ul>
+        </div>
+    );
+};
+export default ItemDetail3
+// className={selected ? 'selected-item' : ''}
