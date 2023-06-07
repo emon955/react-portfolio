@@ -12,6 +12,7 @@ const Context = ({ children }) => {
          price: '$45.25',
          size: ['x', 'xl', 'm'],
          inStock: ['1', '2', '3', '4'],
+         category:"fashion",
          productslideImage: [
             'https://flone.jamstacktemplates.dev/assets/img/product/fashion/1.jpg',
             'https://flone.jamstacktemplates.dev/assets/img/product/fashion/3.jpg',
@@ -29,7 +30,7 @@ const Context = ({ children }) => {
             {
                "item": "Item 1",
                "Weight": " 400 g",
-               "Dimensions":"Dimensions:  10 x 10 x 15 cm",            
+               "Dimensions": "Dimensions:  10 x 10 x 15 cm",
             },
             {
                "item2": "Item 2",
@@ -46,6 +47,9 @@ const Context = ({ children }) => {
          price: "$34.56",
          size: ['x', 'xl', 'm'],
          inStock: false,
+         imagebatch: '10%',
+         category:"fashion",
+         img: 'https://flone.jamstacktemplates.dev/assets/img/product/fashion/6.jpg',
          productslideImage: [
             'https://flone.jamstacktemplates.dev/assets/img/product/fashion/1.jpg',
             'https://flone.jamstacktemplates.dev/assets/img/product/fashion/3.jpg',
@@ -53,8 +57,25 @@ const Context = ({ children }) => {
             'https://flone.jamstacktemplates.dev/assets/img/product/fashion/8.jpg',
             'https://flone.jamstacktemplates.dev/assets/img/product/fashion/9.jpg',
          ],
-         imagebatch: '10%',
-         img: 'https://flone.jamstacktemplates.dev/assets/img/product/fashion/6.jpg'
+         description_review_topbar: [
+            'Additional Information',
+            'Description',
+            'Reviews(2)'
+         ],
+         description_review_item: [
+            {
+               "item": "Item 1",
+               "Weight": " 400 g",
+               "Dimensions": "Dimensions:  10 x 10 x 15 cm",
+            },
+            {
+               "item2": "Item 2",
+            },
+            {
+               "item3": "Item 3",
+            }
+         ],
+
       },
       {
          id: "3",
@@ -63,7 +84,34 @@ const Context = ({ children }) => {
          price: "$59.00",
          size: ['x', 'xl', 'm'],
          inStock: ['1', '2', '3', '4'],
-         img: 'https://flone.jamstacktemplates.dev/assets/img/product/fashion/23.jpg'
+         category:"fashion",
+         img: 'https://flone.jamstacktemplates.dev/assets/img/product/fashion/23.jpg',
+         productslideImage: [
+            'https://flone.jamstacktemplates.dev/assets/img/product/fashion/1.jpg',
+            'https://flone.jamstacktemplates.dev/assets/img/product/fashion/3.jpg',
+            'https://flone.jamstacktemplates.dev/assets/img/product/fashion/6.jpg',
+            'https://flone.jamstacktemplates.dev/assets/img/product/fashion/8.jpg',
+            'https://flone.jamstacktemplates.dev/assets/img/product/fashion/9.jpg',
+         ],
+         description_review_topbar: [
+            'Additional Information',
+            'Description',
+            'Reviews(2)'
+         ],
+         description_review_item: [
+            {
+               "item": "Item 1",
+               "Weight": " 400 g",
+               "Dimensions": "Dimensions:  10 x 10 x 15 cm",
+            },
+            {
+               "item2": "Item 2",
+            },
+            {
+               "item3": "Item 3",
+            }
+         ],
+
       },
       {
          id: "4",
@@ -72,7 +120,34 @@ const Context = ({ children }) => {
          size: ['x', 'xl', 'm'],
          price: "$100.12",
          inStock: ['1', '2', '3', '4'],
-         img: 'https://flone.jamstacktemplates.dev/assets/img/product/fashion/3.jpg'
+         category:"fashion",
+         img: 'https://flone.jamstacktemplates.dev/assets/img/product/fashion/3.jpg',
+         productslideImage: [
+            'https://flone.jamstacktemplates.dev/assets/img/product/fashion/1.jpg',
+            'https://flone.jamstacktemplates.dev/assets/img/product/fashion/3.jpg',
+            'https://flone.jamstacktemplates.dev/assets/img/product/fashion/6.jpg',
+            'https://flone.jamstacktemplates.dev/assets/img/product/fashion/8.jpg',
+            'https://flone.jamstacktemplates.dev/assets/img/product/fashion/9.jpg',
+         ],
+         description_review_topbar: [
+            'Additional Information',
+            'Description',
+            'Reviews(2)'
+         ],
+         description_review_item: [
+            {
+               "item": "Item 1",
+               "Weight": " 400 g",
+               "Dimensions": "Dimensions:  10 x 10 x 15 cm",
+            },
+            {
+               "item2": "Item 2",
+            },
+            {
+               "item3": "Item 3",
+            }
+         ],
+
       },
       {
          id: "5",
@@ -81,7 +156,34 @@ const Context = ({ children }) => {
          price: "$13.49",
          size: ['x', 'xl', 'm'],
          inStock: ['1', '2', '3', '4'],
-         img: 'https://flone.jamstacktemplates.dev/assets/img/product/fashion/29.jpg'
+         category:"fashion",
+         img: 'https://flone.jamstacktemplates.dev/assets/img/product/fashion/29.jpg',
+         productslideImage: [
+            'https://flone.jamstacktemplates.dev/assets/img/product/fashion/1.jpg',
+            'https://flone.jamstacktemplates.dev/assets/img/product/fashion/3.jpg',
+            'https://flone.jamstacktemplates.dev/assets/img/product/fashion/6.jpg',
+            'https://flone.jamstacktemplates.dev/assets/img/product/fashion/8.jpg',
+            'https://flone.jamstacktemplates.dev/assets/img/product/fashion/9.jpg',
+         ],
+         description_review_topbar: [
+            'Additional Information',
+            'Description',
+            'Reviews(2)'
+         ],
+         description_review_item: [
+            {
+               "item": "Item 1",
+               "Weight": " 400 g",
+               "Dimensions": "Dimensions:  10 x 10 x 15 cm",
+            },
+            {
+               "item2": "Item 2",
+            },
+            {
+               "item3": "Item 3",
+            }
+         ],
+
       },
       {
          id: "6",
@@ -90,7 +192,34 @@ const Context = ({ children }) => {
          price: "$36.70",
          size: ['x', 'xl', 'm'],
          inStock: ['1', '2', '3', '4'],
-         img: 'https://flone.jamstacktemplates.dev/assets/img/product/fashion/5.jpg'
+         category:"fashion",
+         img: 'https://flone.jamstacktemplates.dev/assets/img/product/fashion/5.jpg',
+         productslideImage: [
+            'https://flone.jamstacktemplates.dev/assets/img/product/fashion/1.jpg',
+            'https://flone.jamstacktemplates.dev/assets/img/product/fashion/3.jpg',
+            'https://flone.jamstacktemplates.dev/assets/img/product/fashion/6.jpg',
+            'https://flone.jamstacktemplates.dev/assets/img/product/fashion/8.jpg',
+            'https://flone.jamstacktemplates.dev/assets/img/product/fashion/9.jpg',
+         ],
+         description_review_topbar: [
+            'Additional Information',
+            'Description',
+            'Reviews(2)'
+         ],
+         description_review_item: [
+            {
+               "item": "Item 1",
+               "Weight": " 400 g",
+               "Dimensions": "Dimensions:  10 x 10 x 15 cm",
+            },
+            {
+               "item2": "Item 2",
+            },
+            {
+               "item3": "Item 3",
+            }
+         ],
+
       },
       {
          id: "7",
@@ -99,7 +228,34 @@ const Context = ({ children }) => {
          price: "$22.78",
          size: ['x', 'xl', 'm'],
          inStock: ['1', '2', '3', '4'],
-         img: 'https://flone.jamstacktemplates.dev/assets/img/product/fashion/30.jpg'
+         category:"fashion",
+         img: 'https://flone.jamstacktemplates.dev/assets/img/product/fashion/30.jpg',
+         productslideImage: [
+            'https://flone.jamstacktemplates.dev/assets/img/product/fashion/1.jpg',
+            'https://flone.jamstacktemplates.dev/assets/img/product/fashion/3.jpg',
+            'https://flone.jamstacktemplates.dev/assets/img/product/fashion/6.jpg',
+            'https://flone.jamstacktemplates.dev/assets/img/product/fashion/8.jpg',
+            'https://flone.jamstacktemplates.dev/assets/img/product/fashion/9.jpg',
+         ],
+         description_review_topbar: [
+            'Additional Information',
+            'Description',
+            'Reviews(2)'
+         ],
+         description_review_item: [
+            {
+               "item": "Item 1",
+               "Weight": " 400 g",
+               "Dimensions": "Dimensions:  10 x 10 x 15 cm",
+            },
+            {
+               "item2": "Item 2",
+            },
+            {
+               "item3": "Item 3",
+            }
+         ],
+
       },
       {
          id: "8",
@@ -108,7 +264,34 @@ const Context = ({ children }) => {
          price: "$89.32",
          size: ['x', 'xl', 'm'],
          inStock: ['1', '2', '3', '4'],
-         img: 'https://flone.jamstacktemplates.dev/assets/img/product/fashion/3.jpg'
+         category:"fashion",
+         img: 'https://flone.jamstacktemplates.dev/assets/img/product/fashion/3.jpg',
+         productslideImage: [
+            'https://flone.jamstacktemplates.dev/assets/img/product/fashion/1.jpg',
+            'https://flone.jamstacktemplates.dev/assets/img/product/fashion/3.jpg',
+            'https://flone.jamstacktemplates.dev/assets/img/product/fashion/6.jpg',
+            'https://flone.jamstacktemplates.dev/assets/img/product/fashion/8.jpg',
+            'https://flone.jamstacktemplates.dev/assets/img/product/fashion/9.jpg',
+         ],
+         description_review_topbar: [
+            'Additional Information',
+            'Description',
+            'Reviews(2)'
+         ],
+         description_review_item: [
+            {
+               "item": "Item 1",
+               "Weight": " 300 g",
+               "Dimensions": "Dimensions:  10 x 10 x 15 cm",
+            },
+            {
+               "item2": "Item 2",
+            },
+            {
+               "item3": "Item 3",
+            }
+         ],
+
       }
    ];
    const [state, dispatch] = useReducer(cartReducer, {

@@ -1,18 +1,17 @@
 import React, { useState } from 'react'
-import { CartState } from '../context/Context';
+import { CartState } from '../../context/Context';
 import { Link } from 'react-router-dom'
-// import { useHistory } from 'react-router-dom';
-import Rating from './Rating';
+import Rating from '../Rating';
+// import '../style.css'
 import { AiOutlineHeart, AiFillEye, AiFillHeart } from "react-icons/ai";
-import ViewSingleProduct from './ViewSingleProduct';
-const SingleProduct = ({ prod }) => {
+const RelatedProduct = ({ prod }) => {
     const {
         state: { cart },
+        state: { products },
         whilliststate: { whillist },
         dispatchWhillist,
         dispatch,
     } = CartState();
-
     return (
         <div className='product-box'>
             <div className='product-imge'>
@@ -52,7 +51,6 @@ const SingleProduct = ({ prod }) => {
                     <div className='add-remove-btn'>
                         {cart.some((p) => p.id === prod.id) ? (
                             <button className='remove_from_cart'
-
                                 disabled={!prod.inStock}
                             >
                                 added
@@ -71,18 +69,23 @@ const SingleProduct = ({ prod }) => {
                             </button>
                         )}
                     </div>
+                    {/* <div className='quick-view'>
+                        <Link to={`/ViewSingleProduct/${prod.id}`}>
+                            <AiFillEye />
+                        </Link>
+                    </div> */}
                     <div className='quick-view'>
-                        <Link  to={`/ViewSingleProduct/${prod.id}`} className='link-quick-view'> <AiFillEye className='quick-view-icon' /></Link>
+                        <Link to={`/SingleRelatedPage/${prod.id}`} className='link-quick-view'> <AiFillEye className='quick-view-icon' /></Link>
                     </div>
                 </div>
                 <div className='product-image-batch'>
                     {/* <span className='pink'>
-                            {prod.imagebatch}
-                        </span> */}
+                        {prod.imagebatch}
+                    </span> */}
                 </div>
             </div>
             <div className='product-details'>
-                <div className='product-details-title'>{prod.title}</div>
+                <div>{prod.title}</div>
 
                 <div className='product-rating'>
                     <Rating rating={prod.rating} />
@@ -93,6 +96,5 @@ const SingleProduct = ({ prod }) => {
             </div>
         </div>
     )
-}
-
-export default SingleProduct
+};
+export default RelatedProduct

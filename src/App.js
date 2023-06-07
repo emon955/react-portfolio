@@ -13,6 +13,7 @@ import Cart from './Component/Cart/Cart';
 import Wishlist from './Component/wishlist/Wishlist';
 import Footer from './Component/footer/Footer';
 import ViewSingleProduct from './Component/Shopping cart/component/ViewSingleProduct';
+import SingleRelatedPage from './Component/Shopping cart/component/Related Product/SingleRelatedPage';
 function App() {
   return (
     <HashRouter>
@@ -24,6 +25,7 @@ function App() {
         <Route path="skill" element={<Skill />} />
         <Route path="signup" element={<SignUp />} />
         <Route path="/ViewSingleProduct/:productId" element={<><ViewSingleProduct /><Footer/></>}  />
+        <Route path="/SingleRelatedPage/:productId" element={<><SingleRelatedPage /><Footer/></>}  />
         <Route path="cart" element={<>
           <Cart />
           <Footer />
