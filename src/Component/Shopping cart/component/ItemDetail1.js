@@ -1,6 +1,6 @@
 import React from 'react';
-import ItemDetail2 from './ItemDetail2';
 import ItemDetail3 from './ItemDetail3';
+import ItemDetail2 from './ItemDetail2';
 const ItemDetail1 = ({ item, selected }) => {
   console.log(selected)
   return (
@@ -11,11 +11,18 @@ const ItemDetail1 = ({ item, selected }) => {
       <h1>{item.item2}</h1>
       <h5>{item.item3}</h5> */}
       {selected === 2 ? (
-        <h1>h1</h1>
+        <div><ItemDetail2 /></div>
       ) : selected === 1 ? (
-        <h1>hello</h1>
+        <div class="product-anotherinfo-wrapper">
+          <ul>
+            <li><span>Weight</span> 400 g</li>
+            <li><span>Dimensions</span>10 x 10 x 15 cm </li>
+            <li><span>Materials</span> 60% cotton, 40% polyester</li>
+            <li><span>Other Info</span> American heirloom jean shorts pug seitan letterpress</li>
+          </ul>
+        </div>
       ) : selected === 3 ? (
-        <h1>hi</h1>
+        <div><ItemDetail3 /></div>
       ) : null}
     </div>
   );
