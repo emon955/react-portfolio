@@ -2,7 +2,6 @@ import React from 'react';
 import ItemDetail3 from './ItemDetail3';
 import ItemDetail2 from './ItemDetail2';
 const ItemDetail1 = ({ item, selected }) => {
-  console.log(selected)
   return (
     <div style={{ display: selected ? 'block' : 'none' }}>
       {/* <ul>

@@ -191,7 +191,7 @@ const SingleRelatedPage = () => {
             </div>
           </div>
         </div>
-        <div className='product-section'>
+        {/* <div className='product-section'>
           <h3 class="section-title">
             <b></b>
             <span class="section-title-main">Relate</span>
@@ -204,7 +204,7 @@ const SingleRelatedPage = () => {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
   )
 }

@@ -7,19 +7,22 @@ import { BiGitCompare } from 'react-icons/bi';
 import { AiOutlineDribbble, AiOutlineTwitter } from 'react-icons/ai';
 import { FaPinterestP } from 'react-icons/fa';
 import { AiFillLinkedin } from 'react-icons/ai';
+import { AiOutlineHeart, AiFillEye, AiFillHeart } from "react-icons/ai";
 import { Link } from 'react-router-dom';
 import './viewsingleproduct.css'
 import ItemDetail1 from './ItemDetail1';
+import Rating from './Rating';
 import Route from './Route/Route';
 import RelatedProduct from './Related Product/RelatedProduct';
 // import ItemDetail2 from './ItemDetail2';
 // import ItemDetail3 from './ItemDetail3';
 function ViewSingleProduct() {
   const { productId } = useParams()
-  console.log(productId)
   const {
     state: { products },
     state: { cart },
+    whilliststate: { whillist },
+    dispatchWhillist,
     dispatch,
   } = CartState();
   const thisProduct = products.find(prod => prod.id === productId)
@@ -55,12 +58,11 @@ function ViewSingleProduct() {
 
     setRelatedProducts(limitedProducts);
   }, [thisProduct]);
+
   const handleTopbarClick = (index) => {
     setSelectedItem(index + 1);
 
   };
-
-  console.log(relatedProducts)
   return (
     <div>
       <Route />
@@ -205,7 +207,7 @@ function ViewSingleProduct() {
         <div className='product-container'>
           <div className='product-row'>
             {relatedProducts.map((prod) => (
-              <RelatedProduct prod={prod} key={prod.id} />
+               <RelatedProduct key={prod.id} prod={prod} />
             ))}
           </div>
         </div>

@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom'
 import Rating from '../Rating';
 // import '../style.css'
 import { AiOutlineHeart, AiFillEye, AiFillHeart } from "react-icons/ai";
-const RelatedProduct = ({ prod }) => {
+import ViewSingleProduct from '../ViewSingleProduct';
+const RelatedProduct = ({prod}) => {
     const {
         state: { cart },
         state: { products },
@@ -12,6 +13,7 @@ const RelatedProduct = ({ prod }) => {
         dispatchWhillist,
         dispatch,
     } = CartState();
+   
     return (
         <div className='product-box'>
             <div className='product-imge'>
@@ -69,11 +71,6 @@ const RelatedProduct = ({ prod }) => {
                             </button>
                         )}
                     </div>
-                    {/* <div className='quick-view'>
-                        <Link to={`/ViewSingleProduct/${prod.id}`}>
-                            <AiFillEye />
-                        </Link>
-                    </div> */}
                     <div className='quick-view'>
                         <Link to={`/SingleRelatedPage/${prod.id}`} className='link-quick-view'> <AiFillEye className='quick-view-icon' /></Link>
                     </div>
