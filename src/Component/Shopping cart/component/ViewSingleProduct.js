@@ -102,7 +102,7 @@ function ViewSingleProduct() {
                 <div className="product_add_cart">
                   {
                     !thisProduct.inStock ? (
-                      <button
+                      <button className='btn'
                         disabled={!thisProduct.inStock}
                       >Out of stock</button>
                     ) : (

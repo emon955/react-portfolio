@@ -437,4 +437,8 @@ ul li{
   .down-menu{
     display: none;
   }
+  .nav-row{
+    display: flex;
+    align-items: flex-start;
+  }
 }
