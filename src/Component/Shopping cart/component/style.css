@@ -10,13 +10,14 @@
 .product-section .product-container .product-row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     width: 100%;
 }
 
 .product-section .product-container .product-row .product-box {
     width: 23%;
     overflow: hidden;
+    margin-right: 2%;
 }
 
 .product-section .product-container .product-row .product-box .product-imge {

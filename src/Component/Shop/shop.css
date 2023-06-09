@@ -1,0 +1,125 @@
+.shop-section {
+    width: 100%;
+}
+
+.shop-section .shop-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.shop-section .shop-container .shop-row {
+    display: flex;
+    padding-top: 80px;
+}
+
+.shop-section .shop-container .shop-row .shop-left {
+    display: flex;
+    width: 27%;
+}
+
+.shop-section .shop-container .shop-row .shop-left .shop-left-style {
+    margin-right: 30px;
+}
+
+.shop-section .shop-container .shop-row .shop-left .shop-left-style .sidebar-widget .pro-sidebar-title {
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.mb-50 {
+    margin-bottom: 50px;
+}
+
+.mt-25 {
+    margin-top: 25px;
+}
+
+.mt-30 {
+    margin-top: 30px
+}
+
+.pro-sidebar-search .pro-sidebar-search-form {
+    position: relative;
+}
+
+.pro-sidebar-search .pro-sidebar-search-form input {
+    background: transparent none repeat scroll 0 0;
+    border: 1px solid #e6e6e6;
+    color: #000;
+    font-size: 14px;
+    height: 43px;
+    padding: 2px 55px 2px 18px;
+}
+
+.pro-sidebar-search .pro-sidebar-search-form button {
+    position: absolute;
+    top: 23%;
+    right: 3px;
+    background: transparent none repeat scroll 0 0;
+    border: #a1a5aa;
+    border-image: none;
+    border-left: 1px solid #a1a5aa;
+    color: #000;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 0 15px;
+}
+
+.sidebar-widget .sidebar-widget-list ul li {
+    align-items: center;
+    padding: 0 0 15px;
+    position: relative;
+}
+
+.sidebar-widget .sidebar-widget-list ul li button {
+    background: none;
+    border: none;
+    display: block;
+    padding: 0 0 0 30px;
+    position: relative;
+    text-align: left;
+    text-transform: capitalize;
+    width: 100%;
+    color: #000;
+}
+.sidebar-widget .sidebar-widget-list ul li button.active{
+    background: red;
+}
+.sidebar-widget .sidebar-widget-list ul li button  .checkmark {
+    border: 2px solid #888;
+    border-radius: 3px;
+    height: 15px;
+    left: 0;
+    position: absolute;
+    width: 15px;
+    background-color: fff;
+}
+.sidebar-widget .sidebar-widget-list ul li button  .checkmark.active{
+    background-color: red;
+}
+.shop-section .shop-container .shop-row .product-section.shop {
+    width: 70%;
+}
+
+.shop-section .shop-container .shop-row .product-section.shop .product-container {
+    width: 100%;
+}
+
+.shop-section .shop-container .shop-row .product-section.shop .product-container .product-row {
+    width: 100%;
+}
+
+.shop-section .shop-container .shop-row .product-section.shop .product-container .product-row .product-box {
+    width: 31.33%;
+    margin-right: 3%;
+}
+
+.shop-section .shop-container .shop-row .product-section.shop .product-container .product-row .product-box:nth-child(3) {
+    margin-right: 0px;
+}
+
+.shop-section .shop-container .shop-row .product-section.shop .product-container .product-row .product-box:nth-child(6) {
+    margin-right: 0px;
+}

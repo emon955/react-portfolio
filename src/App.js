@@ -15,9 +15,11 @@ import Footer from './Component/footer/Footer';
 import ViewSingleProduct from './Component/Shopping cart/component/ViewSingleProduct';
 import SingleRelatedPage from './Component/Shopping cart/component/Related Product/SingleRelatedPage';
 import Shop from './Component/Shop/Shop';
+import ScrollToTop from './Component/ScrollTop/ScrollToTop';
 function App() {
   return (
     <HashRouter>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" eaxct element={<Home />} />

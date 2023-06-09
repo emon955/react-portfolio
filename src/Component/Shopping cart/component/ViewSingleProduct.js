@@ -7,7 +7,6 @@ import { BiGitCompare } from 'react-icons/bi';
 import { AiOutlineDribbble, AiOutlineTwitter } from 'react-icons/ai';
 import { FaPinterestP } from 'react-icons/fa';
 import { AiFillLinkedin } from 'react-icons/ai';
-import { AiOutlineHeart, AiFillEye, AiFillHeart } from "react-icons/ai";
 import { Link } from 'react-router-dom';
 import './viewsingleproduct.css'
 import ItemDetail1 from './ItemDetail1';
@@ -198,10 +197,10 @@ function ViewSingleProduct() {
           </div>
         </div>
       </div>
-      <div className='product-section'>
+      {/* <div className='product-section'>
         <h3 class="section-title">
           <b></b>
-          <span class="section-title-main">Relate</span>
+          <span class="section-title-main">Relate PRODUCT</span>
           <b></b>
         </h3>
         <div className='product-container'>
@@ -211,7 +210,23 @@ function ViewSingleProduct() {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
+      {relatedProducts.length > 0 && (
+        <div className='product-section'>
+          <h3 className="section-title">
+            <b></b>
+            <span className="section-title-main">Relate PRODUCT</span>
+            <b></b>
+          </h3>
+          <div className='product-container'>
+            <div className='product-row'>
+              {relatedProducts.map((prod) => (
+                <RelatedProduct key={prod.id} prod={prod} />
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

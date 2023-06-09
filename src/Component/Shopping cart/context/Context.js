@@ -84,7 +84,7 @@ const Context = ({ children }) => {
          price: "$59.00",
          size: ['x', 'xl', 'm'],
          inStock: ['1', '2', '3', '4'],
-         category:"fashion",
+         category:"men",
          img: 'https://flone.jamstacktemplates.dev/assets/img/product/fashion/23.jpg',
          productslideImage: [
             'https://flone.jamstacktemplates.dev/assets/img/product/fashion/1.jpg',
@@ -228,7 +228,7 @@ const Context = ({ children }) => {
          price: "$22.78",
          size: ['x', 'xl', 'm'],
          inStock: ['1', '2', '3', '4'],
-         category:"fashion",
+         category:"all",
          img: 'https://flone.jamstacktemplates.dev/assets/img/product/fashion/30.jpg',
          productslideImage: [
             'https://flone.jamstacktemplates.dev/assets/img/product/fashion/1.jpg',
@@ -264,7 +264,7 @@ const Context = ({ children }) => {
          price: "$89.32",
          size: ['x', 'xl', 'm'],
          inStock: ['1', '2', '3', '4'],
-         category:"fashion",
+         category:"all",
          img: 'https://flone.jamstacktemplates.dev/assets/img/product/fashion/3.jpg',
          productslideImage: [
             'https://flone.jamstacktemplates.dev/assets/img/product/fashion/1.jpg',
