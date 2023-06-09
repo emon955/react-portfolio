@@ -110,41 +110,7 @@ const Navbar = () => {
                   </form>
                 </div>
                 <ul className='nav-ul'>
-                  <li >
-                    <Link to="/" className=' item'>home</Link>
-                    <div className='down-menu'><FiChevronDown /></div>
-                    <span onClick={expandminimizefunc}>{expandminimize ? (<MdMinimize onClick={addclass} />) : (<AiOutlinePlus onClick={addclass} />)}</span>
-                    <ul id={myclass ? "active" : ""} className='inner-menu inner-menu-padding'>
-                      <li>
-                        <ul>
-                          <li >
-                            <span onClick={expandminimizefunc1st} className='home-grp-plus'>{expandminimize1st ? (<MdMinimize onClick={addIdFirstgroup} className='home-grp-plus' />) : (<AiOutlinePlus onClick={addIdFirstgroup} className='home-grp-plus' />)}</span>
-                            <Link to="/" style={{ position: 'relative', marginLeft: 10 }} className='inner-menu-title'>Home Group Onee</Link>
-                          </li>
-                          <li id={firstgroupitem ? "display" : "none"} className='inner-menu-li'> <Link to="/" >contact</Link></li>
-                          <li id={firstgroupitem ? "display" : "none"} className='inner-menu-li'> <Link to="/" >contact</Link></li>
-                        </ul>
-                      </li>
-                      <li>
-                        <ul>
-                          <li >
-                            <span onClick={expandminimizefunc2nd} className='home-grp-plus'>{expandminimize2nd ? (<MdMinimize onClick={addIdsecondgroup} className='home-grp-plus' />) : (<AiOutlinePlus onClick={addIdsecondgroup} className='home-grp-plus' />)}</span>
-                            <Link to="/" style={{ position: 'relative', marginLeft: 10 }} className='inner-menu-title'>Home Group Onee</Link></li>
-                          <li id={secondgroupitem ? "display" : "none"} className='inner-menu-li'> <Link to="/" >contact</Link></li>
-                          <li id={secondgroupitem ? "display" : "none"} className='inner-menu-li'> <Link to="/" >contact</Link></li>
-                        </ul>
-                      </li>
-                      <li>
-                        <ul>
-                          <li >
-                            <span onClick={expandminimizefuncthird} className='home-grp-plus'>{expandminimizethird ? (<MdMinimize onClick={addIdthirdgroup} className='home-grp-plus' />) : (<AiOutlinePlus onClick={addIdthirdgroup} className='home-grp-plus' />)}</span>
-                            <Link to="/" style={{ position: 'relative', marginLeft: 10 }} className='inner-menu-title'>Home Group Onee</Link></li>
-                          <li id={expandminimizethird ? "display" : "none"} className='inner-menu-li'> <Link to="/" >contact</Link></li>
-                          <li id={expandminimizethird ? "display" : "none"} className='inner-menu-li'> <Link to="/" >contact</Link></li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
+                     <li > <Link to="/" className=' item'>home</Link></li>
                   <li> <Link to="/shop" className=' item'>shop</Link></li>
                   <li>
                     <Link to="/contact" className='contact item'>contact</Link>

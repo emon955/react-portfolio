@@ -6,18 +6,32 @@ import Rating from './Rating';
 import { AiOutlineHeart, AiFillEye, AiFillHeart } from "react-icons/ai";
 import ViewSingleProduct from './ViewSingleProduct';
 const SingleProduct = ({ prod }) => {
+    const [hovered, setHovered] = useState(false);
     const {
         state: { cart },
         whilliststate: { whillist },
         dispatchWhillist,
         dispatch,
     } = CartState();
+    const handleMouseEnter = () => {
+        setHovered(true);
+    };
 
+    const handleMouseLeave = () => {
+        setHovered(false);
+    };
     return (
         <div className='product-box'>
             <div className='product-imge'>
                 <div className='img-box'>
-                    <img src={prod.img} />
+                    {/* <img src={prod.img} /> */}
+                    <img
+                        src={hovered ? prod.productslideImage[0] : prod.img}
+                        alt="Product"
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
+                        className={hovered ? 'hovered' : ''}
+                    />
                 </div>
                 <div className='product-functionality'>
                     <div className='whilelsit'>
@@ -72,14 +86,19 @@ const SingleProduct = ({ prod }) => {
                         )}
                     </div>
                     <div className='quick-view'>
-                        <Link  to={`/ViewSingleProduct/${prod.id}`} className='link-quick-view'> <AiFillEye className='quick-view-icon' /></Link>
+                        <Link to={`/ViewSingleProduct/${prod.id}`} className='link-quick-view'> <AiFillEye className='quick-view-icon' /></Link>
                     </div>
                 </div>
-                <div className='product-image-batch'>
-                    {/* <span className='pink'>
+                {prod.imagebatch && (
+                    <div className='product-image-batch'>
+                        <span className='pink'>
                             {prod.imagebatch}
-                        </span> */}
-                </div>
+                        </span>
+                        <span className='pink'>
+                            {prod.imagebatch2}
+                        </span>
+                    </div>
+                )}
             </div>
             <div className='product-details'>
                 <div className='product-details-title'>{prod.title}</div>
