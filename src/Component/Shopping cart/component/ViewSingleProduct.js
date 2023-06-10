@@ -7,6 +7,7 @@ import { BiGitCompare } from 'react-icons/bi';
 import { AiOutlineDribbble, AiOutlineTwitter } from 'react-icons/ai';
 import { FaPinterestP } from 'react-icons/fa';
 import { AiFillLinkedin } from 'react-icons/ai';
+import { AiOutlineHeart, AiFillEye, AiFillHeart } from "react-icons/ai";
 import { Link } from 'react-router-dom';
 import './viewsingleproduct.css'
 import ItemDetail1 from './ItemDetail1';
@@ -24,6 +25,7 @@ function ViewSingleProduct() {
     dispatchWhillist,
     dispatch,
   } = CartState();
+  console.log(whillist)
   const thisProduct = products.find(prod => prod.id === productId)
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -129,9 +131,44 @@ function ViewSingleProduct() {
                   }
                 </div>
                 <div class="pro-details-wishlist">
-                  <button class="" className="Add_to_wishlist">
+                  {/* <button class="" className="Add_to_wishlist"
+                    onClick={() =>
+                      dispatchWhillist({
+                        type: "ADD_TO_WHILLIST",
+                        payload: thisProduct,
+                      })
+                    }
+
+                  >
                     <BsHeart />
-                  </button>
+                  </button> */}
+                  {
+                    whillist.some((p) => p.id === thisProduct.id) ? (
+                      <button
+                        onClick={() =>
+                          dispatchWhillist({
+                            type: "REMOVE_FROM_WHILLIST",
+                            payload: thisProduct,
+                          })
+                        }
+                      >
+                        <AiFillHeart className='wishlist-icon'
+                        />
+                      </button>
+                    ) : (
+                      <button
+                        onClick={() =>
+                          dispatchWhillist({
+                            type: "ADD_TO_WHILLIST",
+                            payload: thisProduct,
+                          })
+                        }
+                      >
+                        <AiOutlineHeart className='wishlist-icon'
+                        />
+                      </button>
+                    )
+                  }
                 </div>
                 <div class="pro-details-compare">
                   <button class="Add_to_compare">
@@ -167,50 +204,33 @@ function ViewSingleProduct() {
             </div>
           </div>
         </div>
+        <div className='description-review-top'>
+          <div className='description-review-container'>
+            <ul>
+              {thisProduct.description_review_topbar.map((topbarItem, index) => (
+                <li key={index}>
+                  <Link
+                    to=''
+                    onClick={() => handleTopbarClick(index)}
+                    className={selectedItem === index + 1 ? 'selected-item' : ''}
+                  >
+                    {topbarItem}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
         <div className='description-review-area'>
           <div className='container'>
-            <div className='description-review-wrapper'>
-              <div className='description-review-top-container'>
-                <div className='description-review-top nav'>
-                  <ul>
-                    {thisProduct.description_review_topbar.map((topbarItem, index) => (
-                      <li key={index}>
-                        <Link
-                          to=''
-                          onClick={() => handleTopbarClick(index)}
-                          className={selectedItem === index + 1 ? 'selected-item' : ''}
-                        >
-                          {topbarItem}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-
-              <div className='description-review-bottom'>
-                {items.map((item, index) => (
-                  <ItemDetail1 key={item.id} item={item} selected={selectedItem === item.id ? selectedItem : null} />
-                ))}
-              </div>
+            <div className='description-review-bottom'>
+              {items.map((item, index) => (
+                <ItemDetail1 key={item.id} item={item} selected={selectedItem === item.id ? selectedItem : null} />
+              ))}
             </div>
           </div>
         </div>
       </div>
-      {/* <div className='product-section'>
-        <h3 class="section-title">
-          <b></b>
-          <span class="section-title-main">Relate PRODUCT</span>
-          <b></b>
-        </h3>
-        <div className='product-container'>
-          <div className='product-row'>
-            {relatedProducts.map((prod) => (
-               <RelatedProduct key={prod.id} prod={prod} />
-            ))}
-          </div>
-        </div>
-      </div> */}
       {relatedProducts.length > 0 && (
         <div className='product-section'>
           <h3 className="section-title">

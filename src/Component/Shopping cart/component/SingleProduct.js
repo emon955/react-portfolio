@@ -89,16 +89,20 @@ const SingleProduct = ({ prod }) => {
                         <Link to={`/ViewSingleProduct/${prod.id}`} className='link-quick-view'> <AiFillEye className='quick-view-icon' /></Link>
                     </div>
                 </div>
-                {prod.imagebatch && (
+                {/* {prod.imagebatch && ( */}
                     <div className='product-image-batch'>
-                        <span className='pink'>
-                            {prod.imagebatch}
-                        </span>
-                        <span className='pink'>
-                            {prod.imagebatch2}
-                        </span>
+                        {prod.imagebatch !== false && (
+                            <span className='pink'>
+                                {prod.imagebatch}
+                            </span>
+                        )}
+                        {prod.imagebatch2 !== "" && (
+                            <span className='pink'>
+                                {prod.imagebatch2}
+                            </span>
+                        )}
                     </div>
-                )}
+                {/* )} */}
             </div>
             <div className='product-details'>
                 <div className='product-details-title'>{prod.title}</div>

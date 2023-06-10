@@ -105,7 +105,10 @@ header {
   margin-left: 15px;
   position: relative;
 }
-
+.heart-btn a{
+  color: #000;
+  text-decoration: none;
+}
 .count {
   font-size: 12px;
   background-color: #000;
