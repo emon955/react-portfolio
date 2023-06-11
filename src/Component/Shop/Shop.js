@@ -13,24 +13,20 @@ const Shop = () => {
         dispatch,
     } = CartState();
     // State to keep track of the selected category
-    const [selectedCategory, setSelectedCategory] = useState('all');
-    const [selectedColor, setSelectedColor] = useState('all');
-    // const filteredProducts =
-    //     selectedCategory === 'all'
-    //         ? products
-    //         : products.filter((prod) => prod.category === selectedCategory);
-    const filteredProducts = selectedColor === 'all'
-        ? (selectedCategory === 'all' ? products : products.filter((prod) => prod.category === selectedCategory))
+    const [selectedCategory, setSelectedCategory] = useState('');
+    const [selectedColor, setSelectedColor] = useState('');
+    const filteredProducts = (selectedColor === 'all' || selectedColor === '')
+        ? (selectedCategory === 'all' || selectedCategory === '' ? products : products.filter((prod) => prod.category === selectedCategory))
         : products.filter((prod) => prod.color === selectedColor);
 
     const limitedProducts = filteredProducts.slice(0, 12);
     const handleCategorySelection = (category) => {
         setSelectedCategory(category)
-        setSelectedColor('all'); 
+        setSelectedColor(''); 
     };
     const handleColorSelection = (color) => {
         setSelectedColor(color)
-        setSelectedCategory('all');
+        setSelectedCategory('');
     };
     return (
         <>
