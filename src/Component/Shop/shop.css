@@ -109,14 +109,15 @@
 
 .shop-section .shop-container .shop-row .product-section.shop .product-container .product-row {
     width: 100%;
+    margin-left: 24px;
 }
 
 .shop-section .shop-container .shop-row .product-section.shop .product-container .product-row .product-box {
     width: 31.33%;
-    margin-right: 3%;
+    /* margin-right: 3%; */
 }
 
-.shop-section .shop-container .shop-row .product-section.shop .product-container .product-row .product-box:nth-child(3) {
+/* .shop-section .shop-container .shop-row .product-section.shop .product-container .product-row .product-box:nth-child(3) {
     margin-right: 0px;
 }
 
@@ -128,4 +129,4 @@
 }
 .shop-section .shop-container .shop-row .product-section.shop .product-container .product-row .product-box:nth-child(12) {
     margin-right: 0px;
-}
+} */

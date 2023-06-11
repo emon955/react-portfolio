@@ -14,12 +14,23 @@ const Shop = () => {
     } = CartState();
     // State to keep track of the selected category
     const [selectedCategory, setSelectedCategory] = useState('all');
-    const filteredProducts =
-        selectedCategory === 'all'
-            ? products
-            : products.filter((prod) => prod.category === selectedCategory);
+    const [selectedColor, setSelectedColor] = useState('all');
+    // const filteredProducts =
+    //     selectedCategory === 'all'
+    //         ? products
+    //         : products.filter((prod) => prod.category === selectedCategory);
+    const filteredProducts = selectedColor === 'all'
+        ? (selectedCategory === 'all' ? products : products.filter((prod) => prod.category === selectedCategory))
+        : products.filter((prod) => prod.color === selectedColor);
+
+    const limitedProducts = filteredProducts.slice(0, 12);
     const handleCategorySelection = (category) => {
-        setSelectedCategory(category);
+        setSelectedCategory(category)
+        setSelectedColor('all'); 
+    };
+    const handleColorSelection = (color) => {
+        setSelectedColor(color)
+        setSelectedCategory('all');
     };
     return (
         <>
@@ -44,18 +55,19 @@ const Shop = () => {
                                     <h4 className="pro-sidebar-title">Categories</h4>
                                     <div className="sidebar-widget-list mt-30">
                                         <ul>
+
                                             <li>
                                                 <div className="sidebar-widget-list-left">
-                                                    <button 
+                                                    <button
                                                         onClick={() => handleCategorySelection('all')}
                                                     >
-                                                        <span className={selectedCategory === 'all' ? 'checkmark active' : 'checkmark'}></span> All Categories
+                                                        <span className={selectedCategory === 'all' ? 'checkmark active' : 'checkmark'}></span> all
                                                     </button>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div className="sidebar-widget-list-left">
-                                                    <button 
+                                                    <button
                                                         onClick={() => handleCategorySelection('fashion')}
                                                     >
                                                         <span className={selectedCategory === 'fashion' ? 'checkmark active' : 'checkmark'}></span> fashion
@@ -65,9 +77,43 @@ const Shop = () => {
                                             <li>
                                                 <div className="sidebar-widget-list-left">
                                                     <button
-                                                    onClick={() => handleCategorySelection('men')}
+                                                        onClick={() => handleCategorySelection('men')}
                                                     >
-                                                        <span className={selectedCategory === 'men' ? 'checkmark active' : 'checkmark'}></span> men
+                                                        <span className={selectedCategory === 'men' ? 'checkmark active' : 'checkmark'}></span> women
+                                                    </button>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div className="sidebar-widget-list-left">
+                                                    <button
+                                                        onClick={() => handleCategorySelection('women')}
+                                                    >
+                                                        <span className={selectedCategory === 'women' ? 'checkmark active' : 'checkmark'}></span> women
+                                                    </button>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div className="sidebar-widget">
+                                    <h4 className="pro-sidebar-title">Categories</h4>
+                                    <div className="sidebar-widget-list mt-30">
+                                        <ul>
+                                            <li>
+                                                <div className="sidebar-widget-list-left">
+                                                    <button
+                                                        onClick={() => handleColorSelection('all')}
+                                                    >
+                                                        <span className={selectedColor === 'all' ? 'checkmark active' : 'checkmark'}></span> all colors
+                                                    </button>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div className="sidebar-widget-list-left">
+                                                    <button
+                                                        onClick={() => handleColorSelection('white')}
+                                                    >
+                                                        <span className={selectedColor === 'white' ? 'checkmark active' : 'checkmark'}></span> white
                                                     </button>
                                                 </div>
                                             </li>
@@ -79,7 +125,7 @@ const Shop = () => {
                         <div className='product-section shop'>
                             <div className='product-container'>
                                 <div className='product-row'>
-                                    {filteredProducts.map((prod) => (
+                                    {limitedProducts.map((prod) => (
                                         <SingleProduct prod={prod} key={prod.id} />
                                     ))}
                                 </div>
