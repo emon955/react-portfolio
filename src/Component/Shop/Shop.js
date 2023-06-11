@@ -79,7 +79,7 @@ const Shop = () => {
                                                     <button
                                                         onClick={() => handleCategorySelection('men')}
                                                     >
-                                                        <span className={selectedCategory === 'men' ? 'checkmark active' : 'checkmark'}></span> women
+                                                        <span className={selectedCategory === 'men' ? 'checkmark active' : 'checkmark'}></span> men
                                                     </button>
                                                 </div>
                                             </li>
@@ -96,7 +96,7 @@ const Shop = () => {
                                     </div>
                                 </div>
                                 <div className="sidebar-widget">
-                                    <h4 className="pro-sidebar-title">Categories</h4>
+                                    <h4 className="pro-sidebar-title">Color</h4>
                                     <div className="sidebar-widget-list mt-30">
                                         <ul>
                                             <li>
@@ -114,6 +114,24 @@ const Shop = () => {
                                                         onClick={() => handleColorSelection('white')}
                                                     >
                                                         <span className={selectedColor === 'white' ? 'checkmark active' : 'checkmark'}></span> white
+                                                    </button>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div className="sidebar-widget-list-left">
+                                                    <button
+                                                        onClick={() => handleColorSelection('black')}
+                                                    >
+                                                        <span className={selectedColor === 'black' ? 'checkmark active' : 'checkmark'}></span> black
+                                                    </button>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div className="sidebar-widget-list-left">
+                                                    <button
+                                                        onClick={() => handleColorSelection('brown')}
+                                                    >
+                                                        <span className={selectedColor === 'brown' ? 'checkmark active' : 'checkmark'}></span> Brown
                                                     </button>
                                                 </div>
                                             </li>
