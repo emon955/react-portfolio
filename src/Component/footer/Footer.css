@@ -87,6 +87,10 @@
         width: 48%;
         margin-bottom: 30px;
     }
+    .footer-logo {
+        margin-bottom: 12px;
+        margin-top: 0px;
+    }
   }
 @media screen and (max-width:500px){
     .footer-box{

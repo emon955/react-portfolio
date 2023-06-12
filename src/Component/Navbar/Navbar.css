@@ -312,11 +312,16 @@ ul li {
   .nav-right-wrapper {
     text-align: right;
     width: 75%;
+    padding-top: 5px;
   }
 
   .navbar a li {
     padding: 0 0px;
   }
+  .nav-row {
+    align-items: flex-start;
+    /* align-items: center; */
+}
 
   .cart-btn {
     margin-right: 10px;
@@ -533,11 +538,11 @@ ul li {
   .nav-right-wrapper {
     text-align: right;
     width: 75%;
-    margin-top: 5px;
   }
   .nav-row {
     display: flex;
     align-items: flex-start;
-    /* justify-items: center; */
-  }
+    /* align-items: center; */
+
+}
 }
