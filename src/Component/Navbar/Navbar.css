@@ -144,10 +144,12 @@ header {
 
 .cart-addded-item {
   width: 340px;
-  height: auto;
+  max-height: 500px;
   background-color: #fff;
   padding: 10px 35px;
   border-radius: 5px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
 }
 
 .cart-addded-item ul li {

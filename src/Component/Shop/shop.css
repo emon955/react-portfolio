@@ -146,7 +146,25 @@
     width: 31.33%;
     /* margin-right: 3%; */
 }
-
+.pagination .pageination-container{
+    display: flex;
+    justify-content: center;
+}
+.pagination button{
+    background: none;
+    margin-right: 10px;
+    border: none;
+    border-radius: 100%!important;
+    box-shadow: 0 0 12px 0.8px rgba(0,0,0,.1);
+    color: #a749ff;
+    display: inline-block;
+    font-size: 16px;
+    height: 43px;
+    line-height: 43px;
+    padding: 0;
+    text-align: center;
+    width: 43px;
+}
 /* .shop-section .shop-container .shop-row .product-section.shop .product-container .product-row .product-box:nth-child(3) {
     margin-right: 0px;
 }

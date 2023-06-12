@@ -12,21 +12,12 @@ const Shop = () => {
         dispatchWhillist,
         dispatch,
     } = CartState();
-    // State to keep track of the selected category
     const [selectedCategory, setSelectedCategory] = useState('');
     const [selectedColor, setSelectedColor] = useState('');
     const [selectedSize, setSelectedSize] = useState('');
     const [selectedTag, setSelectedTag] = useState('');
-    // const filteredProducts = (selectedColor === 'all' || selectedColor === '')
-    //     ? (selectedCategory === 'all' || selectedCategory === '' ? products : products.filter((prod) => prod.category === selectedCategory))
-    //     : products.filter((prod) => prod.color === selectedColor);
-    // const filteredProducts = (selectedSize === 'all' || selectedSize === '')
-    //     ? ((selectedColor === 'all' || selectedColor === '')
-    //         ? (selectedCategory === 'all' || selectedCategory === '')
-    //             ? products
-    //             : products.filter((prod) => prod.category === selectedCategory)
-    //         : products.filter((prod) => prod.color === selectedColor))
-    //     : products.filter((prod) => prod.size.includes(selectedSize));
+    const [currentPage, setCurrentPage] = useState(1);
+    const productsPerPage = 12;
     const filteredProducts = (selectedSize === 'all' || selectedSize === '')
         ? ((selectedColor === 'all' || selectedColor === '')
             ? ((selectedCategory === 'all' || selectedCategory === '')
@@ -38,6 +29,18 @@ const Shop = () => {
         : products.filter((prod) => prod.size.includes(selectedSize));
 
     const limitedProducts = filteredProducts.slice(0, 12);
+
+    const indexOfLastProduct = currentPage * productsPerPage;
+    const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+    const currentProducts = filteredProducts.slice(indexOfFirstProduct, indexOfLastProduct);
+
+    const handlePageChange = (pageNumber) => {
+        setCurrentPage(pageNumber);
+    };
+
+    const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
+    const pageNumbers = Array.from({ length: totalPages }, (_, index) => index + 1);
+
     const handleCategorySelection = (category) => {
         setSelectedCategory(category)
         setSelectedColor('');
@@ -261,7 +264,7 @@ const Shop = () => {
                                                         onClick={() => handleTagSelection('full-sleeve')}
                                                         className={selectedTag === 'full-sleeve' ? 'checkmark active' : 'checkmark'}
                                                     >
-                                                       Full Sleeve
+                                                        Full Sleeve
                                                     </button>
                                                 </div>
                                             </li>
@@ -271,7 +274,7 @@ const Shop = () => {
                                                         onClick={() => handleTagSelection('women')}
                                                         className={selectedTag === 'women' ? 'checkmark active' : 'checkmark'}
                                                     >
-                                                       Women
+                                                        Women
                                                     </button>
                                                 </div>
                                             </li>
@@ -283,12 +286,26 @@ const Shop = () => {
                         <div className='product-section shop'>
                             <div className='product-container'>
                                 <div className='product-row'>
-                                    {limitedProducts.map((prod) => (
+                                    {currentProducts.map((prod) => (
                                         <SingleProduct prod={prod} key={prod.id} />
                                     ))}
                                 </div>
                             </div>
+                            <div className="pagination">
+                                <div className='pageination-container'>
+                                    {pageNumbers.map((pageNumber) => (
+                                        <button
+                                            key={pageNumber}
+                                            onClick={() => handlePageChange(pageNumber)}
+                                            className={currentPage === pageNumber ? 'active' : ''}
+                                        >
+                                            {pageNumber}
+                                        </button>
+                                    ))}
+                                </div>
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </div>
