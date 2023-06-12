@@ -6,7 +6,7 @@ export const products = [
         rating: [1, 2, 3],
         price: '$45.25',
         color:"white",
-        size: ['x', 'xl', 'm'],
+        size: ['x', 'xl', 'm','xxl'],
         inStock: ['1', '2', '3', '4'],
         imagebatch: false,
         imagebatch2: '',
@@ -50,6 +50,7 @@ export const products = [
         imagebatch: '10%',
         imagebatch2: '',
         category: "men",
+        tag:'men',
         sellcategory:"best-seller",
         img: 'https://flone.jamstacktemplates.dev/assets/img/product/fashion/6.jpg',
         productslideImage: [
@@ -88,6 +89,7 @@ export const products = [
         inStock: ['1', '2', '3', '4'],
         imagebatch: '-20%',
         category: "men",
+        tag:'men',
         color:"black",
         imagebatch2: '',
         sellcategory:"best-seller",
@@ -130,6 +132,7 @@ export const products = [
         imagebatch: false,
         imagebatch2: 'New',
         category: "men",
+        tag:'men',
         sellcategory:"best-seller",
         img: 'https://flone.jamstacktemplates.dev/assets/img/product/fashion/3.jpg',
         productslideImage: [
@@ -170,6 +173,7 @@ export const products = [
         imagebatch: '-20%',
         imagebatch2: "",
         category: "women",
+        tag:'women',
         sellcategory:"best-seller",
         img: 'https://flone.jamstacktemplates.dev/assets/img/product/fashion/29.jpg',
         productslideImage: [
@@ -210,6 +214,7 @@ export const products = [
         color:"black",
         imagebatch2: 'New',
         category: "women",
+        tag:'women',
         sellcategory:"best-seller",
         img: 'https://flone.jamstacktemplates.dev/assets/img/product/fashion/5.jpg',
         productslideImage: [
@@ -290,6 +295,7 @@ export const products = [
         imagebatch: '-20%',
         imagebatch2: 'New',
         category: "men",
+        tag:'men',
         sellcategory:"best-seller",
         img: 'https://flone.jamstacktemplates.dev/assets/img/product/fashion/3.jpg',
         productslideImage: [
@@ -331,6 +337,7 @@ export const products = [
         color:"brown",
         category: "fashion",
         sellcategory:"new-arrivals",
+        tag:'jacket',
         img: 'https://flone.jamstacktemplates.dev/assets/img/product/fashion/25.jpg',
         productslideImage: [
             'https://flone.jamstacktemplates.dev/assets/img/product/fashion/26.jpg',
@@ -370,6 +377,7 @@ export const products = [
         imagebatch: '-20%',
         imagebatch2: 'New',
         category: "women",
+        tag:'women',
         sellcategory:"new-arrivals",
         img: 'https://flone.jamstacktemplates.dev/assets/img/product/fashion/4.jpg',
         productslideImage: [
@@ -449,6 +457,7 @@ export const products = [
         imagebatch2: 'New',
         category: "fashion",
         sellcategory:"new-arrivals",
+        tag:'jacket',
         img: 'https://flone.jamstacktemplates.dev/assets/img/product/fashion/6.jpg',
         productslideImage: [
             'https://flone.jamstacktemplates.dev/assets/img/product/fashion/8.jpg',
@@ -487,7 +496,9 @@ export const products = [
         imagebatch: '-20%',
         imagebatch2: 'New',
         category: "women",
+        tag:'women',
         sellcategory:"new-arrivals",
+        tag:'full-sleeve',
         img: 'https://flone.jamstacktemplates.dev/assets/img/product/fashion/7.jpg',
         productslideImage: [
             'https://flone.jamstacktemplates.dev/assets/img/product/fashion/5.jpg',
@@ -527,6 +538,7 @@ export const products = [
         imagebatch2: 'New',
         category: "fashion",
         sellcategory:"new-arrivals",
+        tag:'full-sleeve',
         img: 'https://flone.jamstacktemplates.dev/assets/img/product/fashion/25.jpg',
         productslideImage: [
             'https://flone.jamstacktemplates.dev/assets/img/product/fashion/26.jpg',
@@ -566,6 +578,7 @@ export const products = [
         imagebatch2: 'New',
         category: "fashion",
         sellcategory:"new-arrivals",
+        tag:'full-sleeve',
         img: 'https://flone.jamstacktemplates.dev/assets/img/product/fashion/27.jpg',
         productslideImage: [
             'https://flone.jamstacktemplates.dev/assets/img/product/fashion/28.jpg',

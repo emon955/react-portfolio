@@ -15,18 +15,53 @@ const Shop = () => {
     // State to keep track of the selected category
     const [selectedCategory, setSelectedCategory] = useState('');
     const [selectedColor, setSelectedColor] = useState('');
-    const filteredProducts = (selectedColor === 'all' || selectedColor === '')
-        ? (selectedCategory === 'all' || selectedCategory === '' ? products : products.filter((prod) => prod.category === selectedCategory))
-        : products.filter((prod) => prod.color === selectedColor);
+    const [selectedSize, setSelectedSize] = useState('');
+    const [selectedTag, setSelectedTag] = useState('');
+    // const filteredProducts = (selectedColor === 'all' || selectedColor === '')
+    //     ? (selectedCategory === 'all' || selectedCategory === '' ? products : products.filter((prod) => prod.category === selectedCategory))
+    //     : products.filter((prod) => prod.color === selectedColor);
+    // const filteredProducts = (selectedSize === 'all' || selectedSize === '')
+    //     ? ((selectedColor === 'all' || selectedColor === '')
+    //         ? (selectedCategory === 'all' || selectedCategory === '')
+    //             ? products
+    //             : products.filter((prod) => prod.category === selectedCategory)
+    //         : products.filter((prod) => prod.color === selectedColor))
+    //     : products.filter((prod) => prod.size.includes(selectedSize));
+    const filteredProducts = (selectedSize === 'all' || selectedSize === '')
+        ? ((selectedColor === 'all' || selectedColor === '')
+            ? ((selectedCategory === 'all' || selectedCategory === '')
+                ? (selectedTag === 'fashion' || selectedTag === '')
+                    ? products
+                    : products.filter((prod) => prod.tag === selectedTag)
+                : products.filter((prod) => prod.category === selectedCategory))
+            : products.filter((prod) => prod.color === selectedColor))
+        : products.filter((prod) => prod.size.includes(selectedSize));
 
     const limitedProducts = filteredProducts.slice(0, 12);
     const handleCategorySelection = (category) => {
         setSelectedCategory(category)
-        setSelectedColor(''); 
+        setSelectedColor('');
+        setSelectedSize('');
+        setSelectedTag('')
     };
     const handleColorSelection = (color) => {
         setSelectedColor(color)
         setSelectedCategory('');
+        setSelectedSize('');
+        setSelectedTag('')
+    };
+    const handleSizeSelection = (size) => {
+        setSelectedSize(size);
+        setSelectedCategory('');
+        setSelectedColor('');
+        setSelectedTag('')
+    };
+    const handleTagSelection = (Tag) => {
+        setSelectedTag(Tag)
+        setSelectedSize('');
+        setSelectedCategory('');
+        setSelectedColor('');
+
     };
     return (
         <>
@@ -128,6 +163,115 @@ const Shop = () => {
                                                         onClick={() => handleColorSelection('brown')}
                                                     >
                                                         <span className={selectedColor === 'brown' ? 'checkmark active' : 'checkmark'}></span> Brown
+                                                    </button>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div className="sidebar-widget">
+                                    <h4 className="pro-sidebar-title">Size</h4>
+                                    <div className="sidebar-widget-list mt-30">
+                                        <ul>
+                                            <li>
+                                                <div className="sidebar-widget-list-left">
+                                                    <button
+                                                        onClick={() => handleSizeSelection('all')}
+                                                    >
+                                                        <span className={selectedSize === 'all' ? 'checkmark active' : 'checkmark'}></span> all size
+                                                    </button>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div className="sidebar-widget-list-left">
+                                                    <button
+                                                        onClick={() => handleSizeSelection('x')}
+                                                    >
+                                                        <span className={selectedSize === 'x' ? 'checkmark active' : 'checkmark'}></span> x
+                                                    </button>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div className="sidebar-widget-list-left">
+                                                    <button
+                                                        onClick={() => handleSizeSelection('m')}
+                                                    >
+                                                        <span className={selectedSize === 'm' ? 'checkmark active' : 'checkmark'}></span> M
+                                                    </button>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div className="sidebar-widget-list-left">
+                                                    <button
+                                                        onClick={() => handleSizeSelection('xl')}
+                                                    >
+                                                        <span className={selectedSize === 'xl' ? 'checkmark active' : 'checkmark'}></span> Xl
+                                                    </button>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div className="sidebar-widget-list-left">
+                                                    <button
+                                                        onClick={() => handleSizeSelection('xxl')}
+                                                    >
+                                                        <span className={selectedSize === 'xxl' ? 'checkmark active' : 'checkmark'}></span> Xxl
+                                                    </button>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div className="sidebar-widget tag">
+                                    <h4 className="pro-sidebar-title">Tag</h4>
+                                    <div className="sidebar-widget-list mt-30">
+                                        <ul>
+                                            <li>
+                                                <div className="sidebar-widget-list-left">
+                                                    <button
+                                                        onClick={() => handleTagSelection('fashion')}
+                                                        className={selectedTag === 'fashion' ? 'checkmark active' : 'checkmark'}
+                                                    >
+                                                        fashion
+                                                    </button>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div className="sidebar-widget-list-left tag">
+                                                    <button
+                                                        onClick={() => handleTagSelection('men')}
+                                                        className={selectedTag === 'men' ? 'checkmark active' : 'checkmark'}
+                                                    >
+                                                        men
+                                                    </button>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div className="sidebar-widget-list-left tag">
+                                                    <button
+                                                        onClick={() => handleTagSelection('jacket')}
+                                                        className={selectedTag === 'jacket' ? 'checkmark active' : 'checkmark'}
+                                                    >
+                                                        Jacket
+                                                    </button>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div className="sidebar-widget-list-left tag">
+                                                    <button
+                                                        onClick={() => handleTagSelection('full-sleeve')}
+                                                        className={selectedTag === 'full-sleeve' ? 'checkmark active' : 'checkmark'}
+                                                    >
+                                                       Full Sleeve
+                                                    </button>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div className="sidebar-widget-list-left tag">
+                                                    <button
+                                                        onClick={() => handleTagSelection('women')}
+                                                        className={selectedTag === 'women' ? 'checkmark active' : 'checkmark'}
+                                                    >
+                                                       Women
                                                     </button>
                                                 </div>
                                             </li>

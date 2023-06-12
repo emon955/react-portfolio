@@ -66,13 +66,18 @@
     font-size: 20px;
     padding: 0 15px;
 }
-
+.sidebar-widget,.sidebar-widget.tag{
+    padding-top: 20px;
+}
 .sidebar-widget .sidebar-widget-list ul li {
     align-items: center;
     padding: 0 0 15px;
     position: relative;
 }
-
+.sidebar-widget.tag ul li{
+    display: inline-block;
+    margin: 0 35px 2px 0;
+}
 .sidebar-widget .sidebar-widget-list ul li button {
     background: none;
     border: none;
@@ -84,8 +89,23 @@
     width: 100%;
     color: #000;
 }
+.sidebar-widget.tag .sidebar-widget-list ul li button {
+    background: none;
+    background-color: #f6f6f6;
+    border: none;
+    display: block;
+    padding: 0 0 0 0px;
+    position: relative;
+    text-align: left;
+    text-transform: capitalize;
+    width: 100%;
+    color: #000;
+    padding: 9px 17px 12px;
+    border-radius: 50px;
+}
 .sidebar-widget .sidebar-widget-list ul li button.active{
-    background: red;
+    background: #a749ff;
+    color: #f6f6f6;
 }
 .sidebar-widget .sidebar-widget-list ul li button  .checkmark {
     border: 2px solid #888;
