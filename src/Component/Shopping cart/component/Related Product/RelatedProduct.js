@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import { CartState } from '../../context/Context';
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import Rating from '../Rating';
 // import '../style.css'
 import { AiOutlineHeart, AiFillEye, AiFillHeart } from "react-icons/ai";
 import ViewSingleProduct from '../ViewSingleProduct';
-const RelatedProduct = ({prod}) => {
+const RelatedProduct = ({ prod }) => {
     const {
         state: { cart },
         state: { products },
@@ -13,7 +13,7 @@ const RelatedProduct = ({prod}) => {
         dispatchWhillist,
         dispatch,
     } = CartState();
-   
+  
     return (
         <div className='product-box'>
             <div className='product-imge'>
@@ -72,7 +72,10 @@ const RelatedProduct = ({prod}) => {
                         )}
                     </div>
                     <div className='quick-view'>
-                        <Link to={`/ViewSingleProduct/${prod.id}`} className='link-quick-view'> <AiFillEye className='quick-view-icon' /></Link>
+                        <Link
+                            className='link-quick-view'
+                        > <AiFillEye className='quick-view-icon' />
+                        </Link>
                     </div>
                 </div>
                 <div className='product-image-batch'>

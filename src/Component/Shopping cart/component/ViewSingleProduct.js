@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useHistory, useLocation } from 'react-router-dom';
 import { useParams } from "react-router-dom"
 import { CartState } from '../context/Context';
 import { FaStar, FaRegStar, FaFacebookF } from 'react-icons/fa';
@@ -24,11 +25,12 @@ function ViewSingleProduct() {
     whilliststate: { whillist },
     dispatchWhillist,
     dispatch,
-    Comparestate:{compare},
+    Comparestate: { compare },
     dispatchCompare,
 
   } = CartState();
-  console.log(whillist)
+
+  console.log(productId)
   const thisProduct = products.find(prod => prod.id === productId)
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -150,7 +152,7 @@ function ViewSingleProduct() {
                   </button> */}
                   {
                     whillist.some((p) => p.id === thisProduct.id) ? (
-                      <button  style={{color:"#a749ff"}}
+                      <button style={{ color: "#a749ff" }}
                         onClick={() =>
                           dispatchWhillist({
                             type: "REMOVE_FROM_WHILLIST",
@@ -178,14 +180,14 @@ function ViewSingleProduct() {
                   }
                 </div>
                 <div class="pro-details-compare">
-                  <button  className={`Add_to_compare ${isProductAdded(thisProduct) ? 'disabled' : ''}`}
-                   onClick={() =>
-                    dispatchCompare({
-                      type: "ADD_TO_COMPARELIST",
-                      payload: thisProduct,
-                    })
-                  }
-                  disabled={isProductAdded(thisProduct)}
+                  <button className={`Add_to_compare ${isProductAdded(thisProduct) ? 'disabled' : ''}`}
+                    onClick={() =>
+                      dispatchCompare({
+                        type: "ADD_TO_COMPARELIST",
+                        payload: thisProduct,
+                      })
+                    }
+                    disabled={isProductAdded(thisProduct)}
                   >
                     <BiGitCompare />
                   </button>
