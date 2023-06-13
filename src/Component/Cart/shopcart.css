@@ -40,7 +40,7 @@
     scrollbar-width: thin;
     -ms-overflow-style: none;
   }
-  th{
+  .th{
     width: 20%;
     border-top: none;
     color: #333;
@@ -48,17 +48,17 @@
     font-weight: 500;
     padding: 20px;
   }
-  table{
+  .wishlist-tbl table{
     border: 1px solid #ccc;
     width: 100%;
   }
   /* thead{
     border: 1px solid #ccc;
   } */
-  tr{
+  .outer-wrapper tr{
     display:flex;
   }
-  td{
+  /* td{
     align-items: center;
     width: 20%;
     height: 114px;
@@ -66,11 +66,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  td.img-td{
+  } */
+  /* td.img-td{
     justify-content: flex-start;
     padding: 30px 0 30px 30px;
-  }
+  } */
   td img{
     width: 100px;
     height: 114px;

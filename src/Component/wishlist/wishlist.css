@@ -40,7 +40,7 @@
     scrollbar-width: thin;
     -ms-overflow-style: none;
   }
-  .wishlist-tbl th{
+  .outer-wrapper th{
     width: 20%;
     border-top: none;
     color: #333;
@@ -48,17 +48,17 @@
     font-weight: 500;
     padding: 20px;
   }
-  .wishlist-tbl{
+  table{
     border: 1px solid #ccc;
     width: 100%;
   }
   /* thead{
     border: 1px solid #ccc;
   } */
-  .wishlist-tbl tr{
+  /* .wishlist-tbl tr{
     display:flex;
-  }
-  .wishlist-tbl td{
+  } */
+  .outer-wrapper tbody tr td{
     align-items: center;
     width: 20%;
     height: 114px;
@@ -67,7 +67,7 @@
     justify-content: center;
     align-items: center;
   }
-  .wishlist-tbl td.img-td{
+  .outer-wrapper tbody tr td.img-td{
     justify-content: flex-start;
     padding: 30px 0 30px 30px;
   }

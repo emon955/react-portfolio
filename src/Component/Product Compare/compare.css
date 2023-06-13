@@ -13,11 +13,22 @@
     width: 100%;
     border-collapse: collapse;
     font-family: Arial, sans-serif;
+    border: none;
   }
-
+  .product-info{
+    height: 400px;
+    width: 300px;
+  }
   .compare .compare-container  .compare-table th, .compare-table td {
     padding: 8px;
     text-align: center;
     border: 1px solid #ddd;
+    width: 300px;
+    text-align: left;
+    align-items: flex-start;
+    /* border-top: 1px solid #ddd; */
+  }
+  .compare .compare-container  .compare-table th, .compare-table tbody td {
+    height: auto;
     /* border-top: 1px solid #ddd; */
   }
