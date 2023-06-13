@@ -1,6 +1,7 @@
 import React, { createContext, useReducer, useContext } from 'react'
 import { cartReducer } from "./Reducer";
 import { whillistReducer } from "./Reducer";
+import { compareReducer } from "./Reducer";
 import { products } from './ProductsData';
 export const Cart = createContext();
 const Context = ({ children }) => {
@@ -12,8 +13,11 @@ const Context = ({ children }) => {
    const [whilliststate, dispatchWhillist] = useReducer(whillistReducer, {
       whillist: [],
    });
+   const [Comparestate, dispatchCompare] = useReducer(compareReducer, {
+      compare: [],
+   });
    return (
-      <Cart.Provider value={{ state, dispatch, whilliststate, dispatchWhillist }}>
+      <Cart.Provider value={{ state, dispatch, whilliststate, dispatchWhillist, Comparestate,dispatchCompare}}>
          {children}
       </Cart.Provider>
    )

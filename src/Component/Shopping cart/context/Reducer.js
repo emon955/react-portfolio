@@ -32,4 +32,17 @@ export const whillistReducer = (state, action) => {
       return state;
   }
 };
+export const compareReducer = (state, action) => {
+  switch (action.type) {
+    case "ADD_TO_COMPARELIST":
+      return { ...state, compare: [...state.compare, { ...action.payload}] };
+    // case "REMOVE_FROM_CART":
+    //   return {
+    //     ...state,
+    //     cart: state.cart.filter((c) => c.id !== action.payload.id),
+    //   };
+      default:
+      return state;
+  }
+};
 

@@ -24,6 +24,9 @@ function ViewSingleProduct() {
     whilliststate: { whillist },
     dispatchWhillist,
     dispatch,
+    Comparestate:{compare},
+    dispatchCompare,
+
   } = CartState();
   console.log(whillist)
   const thisProduct = products.find(prod => prod.id === productId)
@@ -55,14 +58,17 @@ function ViewSingleProduct() {
     });
 
     // Set the filtered products as the related products
-    const limitedProducts = filteredProducts.slice(0, 4);
+    // const limitedProducts = filteredProducts.slice(0, 4);
 
-    setRelatedProducts(limitedProducts);
+    setRelatedProducts(filteredProducts);
   }, [thisProduct]);
 
   const handleTopbarClick = (index) => {
     setSelectedItem(index + 1);
 
+  };
+  const isProductAdded = (product) => {
+    return compare.some((item) => item.id === product.id);
   };
   return (
     <div>
@@ -144,13 +150,14 @@ function ViewSingleProduct() {
                   </button> */}
                   {
                     whillist.some((p) => p.id === thisProduct.id) ? (
-                      <button
+                      <button  style={{color:"#a749ff"}}
                         onClick={() =>
                           dispatchWhillist({
                             type: "REMOVE_FROM_WHILLIST",
                             payload: thisProduct,
                           })
                         }
+                        disabled
                       >
                         <AiFillHeart className='wishlist-icon'
                         />
@@ -171,7 +178,15 @@ function ViewSingleProduct() {
                   }
                 </div>
                 <div class="pro-details-compare">
-                  <button class="Add_to_compare">
+                  <button  className={`Add_to_compare ${isProductAdded(thisProduct) ? 'disabled' : ''}`}
+                   onClick={() =>
+                    dispatchCompare({
+                      type: "ADD_TO_COMPARELIST",
+                      payload: thisProduct,
+                    })
+                  }
+                  disabled={isProductAdded(thisProduct)}
+                  >
                     <BiGitCompare />
                   </button>
                 </div>

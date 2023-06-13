@@ -72,7 +72,7 @@ const RelatedProduct = ({prod}) => {
                         )}
                     </div>
                     <div className='quick-view'>
-                        <Link to={`/SingleRelatedPage/${prod.id}`} className='link-quick-view'> <AiFillEye className='quick-view-icon' /></Link>
+                        <Link to={`/ViewSingleProduct/${prod.id}`} className='link-quick-view'> <AiFillEye className='quick-view-icon' /></Link>
                     </div>
                 </div>
                 <div className='product-image-batch'>

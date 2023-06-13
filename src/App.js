@@ -1,6 +1,5 @@
 
 import './App.css';
-// import { BrowserRouter } from "react-router-dom"
 import { HashRouter } from "react-router-dom"
 import { Routes, Route } from "react-router-dom"
 import About from './Component/About';
@@ -16,6 +15,7 @@ import ViewSingleProduct from './Component/Shopping cart/component/ViewSinglePro
 import SingleRelatedPage from './Component/Shopping cart/component/Related Product/SingleRelatedPage';
 import Shop from './Component/Shop/Shop';
 import ScrollToTop from './Component/ScrollTop/ScrollToTop';
+import Compare from './Component/Product Compare/Compare';
 function App() {
   return (
     <HashRouter>
@@ -27,6 +27,7 @@ function App() {
         <Route path="contact" element={<Contact />} />
         <Route path="skill" element={<Skill />} />
         <Route path="signup" element={<SignUp />} />
+        <Route path="compare" element={<Compare />} />
         <Route path="shop" element={<><Shop /><Footer/></>} />
         <Route path="/ViewSingleProduct/:productId" element={<><ViewSingleProduct /><Footer/></>}  />
         <Route path="/SingleRelatedPage/:productId" element={<><SingleRelatedPage /><Footer/></>}  />

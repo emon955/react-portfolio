@@ -116,6 +116,9 @@
   font-size: 18px;
   padding-left: 15px;
 }
+.Add_to_compare.disabled{
+  color: #a749ff;
+}
 
 .pro-details-category {
   display: flex;

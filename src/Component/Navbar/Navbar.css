@@ -85,7 +85,10 @@ header {
 .close-nav {
   display: none;
 }
-
+.compare-btn-link{
+  text-decoration: none;
+  color: #000;
+}
 .search-btn,
 .user-btn {
   color: #000;
