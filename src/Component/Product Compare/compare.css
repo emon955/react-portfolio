@@ -1,34 +1,155 @@
-.compare{
-    width: 100%;
+.compare {
+  width: 100%;
 }
+
 .compare-container {
-    margin-top: 20px;
-    /* max-width: 700px;
-    overflow-x: auto; */
-    width: 90%;
-    margin: 0 auto;
+  margin-top: 20px;
+  width: 90%;
+  margin: 0 auto;
+  overflow-x: auto;
+
+}
+
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+}
+
+.compare .compare-container .compare-table th,
+.compare-table td {
+  border: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+}
+
+.compare .compare-container .compare-table thead tr .product-info {
+  background-color: #e6e6e6;
+  border: none;
+  color: #262626;
+  font-size: 19px;
+  text-align: left;
+  vertical-align: top;
+  font-weight: 500;
+  font-family: Poppins, sans-serif;
+  margin: 0;
+  padding: 10px 30px;
+  width: 326px;
+  padding-top: 53px;
+}
+
+.compare .compare-container .compare-table thead tr .image img {
+  width: 100%;
+  display: block;
+  margin: 29px 0px 7px;
+  padding: 0px 12px;
+}
+
+.compare .compare-container .compare-table thead tr .product-title {
+  display: block;
+}
+
+.compare .compare-container .compare-table thead tr .product-title a {
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 5px;
+  text-transform: capitalize;
+  width: 100%;
+  text-decoration: none;
+  font-family: Poppins, sans-serif;
+  color: #000;
+  line-height: 3;
+  transition: all .3s ease 0s;
+}
+
+.compare .compare-container .compare-table thead tr .product-title a:hover {
+  color: #a749ff;
+}
+
+.compare .compare-container .compare-table thead tr td {
+  text-align: center;
+}
+
+.compare .compare-container .compare-table thead tr th .compare-button {
+  margin-top: 8px;
+  margin-bottom: 20px;
+}
+
+.compare .compare-container .compare-table thead tr th .compare-button a {
+  border: none;
+  border-radius: 50px;
+  color: #fff;
+  display: inline-block;
+  padding: 10px 15px;
+  text-decoration: none;
+  background-color: #a749ff;
+}
+
+.compare .compare-container .compare-table thead tr th button {
+  background: none;
+  border: none;
+  margin-top: 10px;
+}
+
+.compare .compare-container .compare-table thead tr th button .compare-remove-btn {
+  font-size: 25px;
+  color: gray;
+}
+
+.compare .compare-container .compare-table tbody .title-column {
+  background-color: #e6e6e6;
+  border-right: none;
+  color: #262626;
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0;
+  /* min-width: 292px; */
+  padding: 10px 30px;
+  font-family: Poppins, sans-serif;
+}
+
+.compare .compare-container .compare-table tbody .product-price {
+  color: #343538;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: Poppins, sans-serif;
+  text-align: center;
+  padding: 15px 0px;
+}
+
+.compare .compare-container .compare-table tbody .product-description p {
+  font-size: 13px;
+  line-height: 1.88;
+  margin: 0;
+  color: #333;
+  font-family: Poppins, sans-serif;
+  text-align: center;
+  padding: 17px 15px;
+  ;
+}
+
+.compare .compare-container .compare-table tbody .product-rating {
+  text-align: center;
+  padding: 17px 15px;
+}
+
+@media screen and (max-width: 500px) {
+  .compare .compare-container .compare-table thead tr .product-info {
+    width: 150px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
-  .compare-table {
+  .compare .compare-container .compare-table th,
+  .compare-table td {
+    min-width: 220px;
+  }
+
+  .compare .compare-container .compare-table thead tr .image img {
     width: 100%;
-    border-collapse: collapse;
-    font-family: Arial, sans-serif;
-    border: none;
+    display: block;
+    margin: -7px 0px 7px;
   }
-  .product-info{
-    height: 400px;
-    width: 300px;
-  }
-  .compare .compare-container  .compare-table th, .compare-table td {
-    padding: 8px;
-    text-align: center;
-    border: 1px solid #ddd;
-    width: 300px;
-    text-align: left;
-    align-items: flex-start;
-    /* border-top: 1px solid #ddd; */
-  }
-  .compare .compare-container  .compare-table th, .compare-table tbody td {
-    height: auto;
-    /* border-top: 1px solid #ddd; */
-  }
+}

@@ -10,7 +10,7 @@ const ItemDetail1 = ({ item, selected }) => {
       <h1>{item.item2}</h1>
       <h5>{item.item3}</h5> */}
       {selected === 2 ? (
-        <div><ItemDetail2 /></div>
+        <div><ItemDetail2 item={item} /></div>
       ) : selected === 1 ? (
         <div class="product-anotherinfo-wrapper">
           <ul>
