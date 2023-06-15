@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import "./shop.css"
 import { CartState } from '../Shopping cart/context/Context'
 import SingleProduct from '../Shopping cart/component/SingleProduct'
@@ -41,6 +41,8 @@ const Shop = () => {
     const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
     const pageNumbers = Array.from({ length: totalPages }, (_, index) => index + 1);
 
+
+
     const handleCategorySelection = (category) => {
         setSelectedCategory(category)
         setSelectedColor('');
@@ -66,6 +68,7 @@ const Shop = () => {
         setSelectedColor('');
 
     };
+   
     return (
         <>
             <Route />

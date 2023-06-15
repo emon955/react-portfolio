@@ -16,6 +16,7 @@ import SingleRelatedPage from './Component/Shopping cart/component/Related Produ
 import Shop from './Component/Shop/Shop';
 import ScrollToTop from './Component/ScrollTop/ScrollToTop';
 import Compare from './Component/Product Compare/Compare';
+import BlogPage from './Component/Blog Page/BlogPage';
 function App() {
   return (
     <HashRouter>
@@ -27,6 +28,7 @@ function App() {
         <Route path="contact" element={<Contact />} />
         <Route path="skill" element={<Skill />} />
         <Route path="signup" element={<SignUp />} />
+        <Route path="blogpage" element={<><BlogPage /><Footer/></>} />
         <Route path="compare" element={<><Compare /><Footer/></>} />
         <Route path="shop" element={<><Shop /><Footer/></>} />
         <Route path="/ViewSingleProduct/:productId" element={<><ViewSingleProduct /><Footer/></>}  />

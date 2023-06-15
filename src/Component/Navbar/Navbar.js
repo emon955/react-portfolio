@@ -19,6 +19,7 @@ const Navbar = () => {
     state: { cart },
     whilliststate: { whillist },
     dispatch,
+    Comparestate:{compare},
     // productDispatch,
   } = CartState()
   const [isMobile, setMobile] = useState(false)
@@ -113,9 +114,9 @@ const Navbar = () => {
                      <li > <Link to="/" className=' item'>home</Link></li>
                   <li> <Link to="/shop" className=' item'>shop</Link></li>
                   <li>
-                    <Link to="/contact" className='contact item'>contact</Link>
+                    <Link to="/shop" className='contact item'>collection</Link>
                   </li>
-                  <li> <Link to="/skill" className='skill item'>skill</Link></li>
+                  <li> <Link to="/blogpage" className='skill item'>blog</Link></li>
                   <li> <Link to="/signup" className='sign item'>SignUp</Link></li>
                 </ul>
               </div>
@@ -124,7 +125,7 @@ const Navbar = () => {
           <div className='nav-right-wrapper'>
             <button className='search-btn'><BsSearch /></button>
             <button className='user-btn'><BiUser /></button>
-            <button className='compare-btn'><Link to="/compare" className='compare-btn-link'><span className='count'>0</span><BiGitCompare /></Link></button>
+            <button className='compare-btn'><Link to="/compare" className='compare-btn-link'><span className='count'>{compare.length > 0 ? compare.length : 0}</span><BiGitCompare /></Link></button>
             <button className='heart-btn'><Link to="/wishlist" className='heart-btn-link'><BsHeart /> <span className='count'>{whillist.length > 0 ? whillist.length : 0}</span></Link></button>
             <button onClick={handleClick} className='cart-btn'><BsCart2 /><span className='count'>{cart.length > 0 ? cart.length : 0}</span></button>
           </div>
