@@ -37,7 +37,7 @@ const Blog = () => {
                         <div className='blog-box'>
                             <div className='inner-blog-container'>
                                 <div className='blog-img'>
-                                    <img src="https://flone.jamstacktemplates.dev/assets/img/blog/blog-1.jpg" />
+                                    <img src="https://flone.jamstacktemplates.dev/assets/img/blog/blog-2.jpg" />
                                     <div className='blog-category-content'>
                                         <span className='tag-name'>
                                             life style
@@ -60,7 +60,7 @@ const Blog = () => {
                         <div className='blog-box'>
                             <div className='inner-blog-container'>
                                 <div className='blog-img'>
-                                    <img src="https://flone.jamstacktemplates.dev/assets/img/blog/blog-1.jpg" />
+                                    <img src="https://flone.jamstacktemplates.dev/assets/img/blog/blog-3.jpg"/>
                                     <div className='blog-category-content'>
                                         <span className='tag-name'>
                                             life style

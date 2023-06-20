@@ -55,7 +55,7 @@ function Footer() {
                             </ul>
                         </div>
                     </div>
-                    <div className='footer-box'>
+                    <div className='footer-box last'>
                         <div className='footer-title'>
                             <h3>SUBSCRIBE</h3>
                         </div>

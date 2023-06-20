@@ -19,21 +19,25 @@ const Navbar = () => {
     state: { cart },
     whilliststate: { whillist },
     dispatch,
-    Comparestate:{compare},
+    Comparestate: { compare },
     // productDispatch,
   } = CartState()
   const [isMobile, setMobile] = useState(false)
   const [toggle, setToggle] = useState(false)
   const [whillists, setwhillist] = useState(false)
-  const handleClickwhillist = () => {
-    setwhillist(!whillists);
-    // setToggle(!toggle);
-    // setwhillist(!whillists);
+  const [user, setUser] = useState(false)
+  const dropdownHandler = () => {
+    setUser(!user);
   };
   const handleClick = () => {
     setToggle(!toggle);
     // setwhillist(!whillists);
     // setToggle(!toggle);
+  };
+  const handleClickwhillist = () => {
+    setwhillist(!whillists);
+    // setToggle(!toggle);
+    // setwhillist(!whillists);
   };
   const [sticky, setSticky] = useState("");
   // on render, set listener
@@ -55,39 +59,6 @@ const Navbar = () => {
   const inputDefault = () => {
     return false
   };
-  const [myclass, changeclass] = useState(false);
-  const addclass = () => {
-    changeclass(current => !current)
-  }
-  const [firstgroupitem, setfirstgroupitem] = useState(false);
-  const addIdFirstgroup = () => {
-    setfirstgroupitem(current => !current)
-  }
-
-  const [secondgroupitem, setsecondgroupitem] = useState(false);
-  const addIdsecondgroup = () => {
-    setsecondgroupitem(current => !current)
-  }
-  const [thirdgroupitem, setthirdgroupitem] = useState(false);
-  const addIdthirdgroup = () => {
-    setthirdgroupitem(current => !current)
-  }
-  const [expandminimize, setexpandminimize] = useState(false)
-  const expandminimizefunc = () => {
-    setexpandminimize(current => !current)
-  }
-  const [expandminimize1st, setexpandminimize1st] = useState(false)
-  const expandminimizefunc1st = () => {
-    setexpandminimize1st(current => !current)
-  }
-  const [expandminimize2nd, setexpandminimize2nd] = useState(false)
-  const expandminimizefunc2nd = () => {
-    setexpandminimize2nd(current => !current)
-  }
-  const [expandminimizethird, setexpandminimizethird] = useState(false)
-  const expandminimizefuncthird = () => {
-    setexpandminimizethird(current => !current)
-  }
   return (
     <header className={classes}>
       <div className='nav-container'>
@@ -111,23 +82,32 @@ const Navbar = () => {
                   </form>
                 </div>
                 <ul className='nav-ul'>
-                     <li > <Link to="/" className=' item'>home</Link></li>
+                  <li > <Link to="/" className=' item'>home</Link></li>
                   <li> <Link to="/shop" className=' item'>shop</Link></li>
                   <li>
                     <Link to="/shop" className='contact item'>collection</Link>
                   </li>
                   <li> <Link to="/blogpage" className='skill item'>blog</Link></li>
-                  <li> <Link to="/signup" className='sign item'>SignUp</Link></li>
+                  <li> <Link to="/contactform" className='sign item'>contact</Link></li>
                 </ul>
               </div>
             </div>
           </div>
           <div className='nav-right-wrapper'>
             <button className='search-btn'><BsSearch /></button>
-            <button className='user-btn'><BiUser /></button>
+            <button className='user-btn'
+            onClick={dropdownHandler}
+            ><BiUser /></button>
             <button className='compare-btn'><Link to="/compare" className='compare-btn-link'><span className='count'>{compare.length > 0 ? compare.length : 0}</span><BiGitCompare /></Link></button>
             <button className='heart-btn'><Link to="/wishlist" className='heart-btn-link'><BsHeart /> <span className='count'>{whillist.length > 0 ? whillist.length : 0}</span></Link></button>
             <button onClick={handleClick} className='cart-btn'><BsCart2 /><span className='count'>{cart.length > 0 ? cart.length : 0}</span></button>
+          </div>
+          <div className='user-dropdown' style={{ display: user ? 'block' : 'none' }}>
+            <ul>
+              <li><Link to="login">Login</Link></li>
+              <li><Link to="register">Register</Link></li>
+              <li><Link to="accountInformation">My Account</Link></li>
+            </ul>
           </div>
           <div className='shopping-cart' style={{ display: toggle ? 'block' : 'none' }}>
             {cart.length > 0 ? (

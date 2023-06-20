@@ -17,6 +17,10 @@ import Shop from './Component/Shop/Shop';
 import ScrollToTop from './Component/ScrollTop/ScrollToTop';
 import Compare from './Component/Product Compare/Compare';
 import BlogPage from './Component/Blog Page/BlogPage';
+import ContactForm from './Component/Contact Form/ContactForm';
+import Login from './Component/Login/Login';
+import Register from './Component/Login/Register';
+import AccountInformation from './Component/Login/AccountInformation ';
 function App() {
   return (
     <HashRouter>
@@ -28,6 +32,10 @@ function App() {
         <Route path="contact" element={<Contact />} />
         <Route path="skill" element={<Skill />} />
         <Route path="signup" element={<SignUp />} />
+        <Route path="accountInformation" element={<><AccountInformation /><Footer/></>} />
+        <Route path="login" element={<><Login /><Footer/></>} />
+        <Route path="register" element={<><Register /><Footer/></>} />
+        <Route path="contactform" element={<><ContactForm /><Footer/></>} />
         <Route path="blogpage" element={<><BlogPage /><Footer/></>} />
         <Route path="compare" element={<><Compare /><Footer/></>} />
         <Route path="shop" element={<><Shop /><Footer/></>} />
