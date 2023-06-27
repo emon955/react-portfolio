@@ -14,6 +14,11 @@ export const cartReducer = (state, action) => {
           c.id === action.payload.id ? (c.qty = action.payload.qty) : c.qty
         ),
       };
+    case 'CLEAR_CART':
+      return {
+        ...state,
+        cart: action.payload, 
+      };
     default:
       return state;
   }
@@ -35,13 +40,13 @@ export const whillistReducer = (state, action) => {
 export const compareReducer = (state, action) => {
   switch (action.type) {
     case "ADD_TO_COMPARELIST":
-      return { ...state, compare: [...state.compare, { ...action.payload}] };
+      return { ...state, compare: [...state.compare, { ...action.payload }] };
     case "REMOVE_FROM_COMPARE":
       return {
         ...state,
         compare: state.compare.filter((c) => c.id !== action.payload.id),
       };
-      default:
+    default:
       return state;
   }
 };
