@@ -1,22 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { useHistory, useLocation } from 'react-router-dom';
 import { useParams } from "react-router-dom"
 import { CartState } from '../context/Context';
 import { FaStar, FaRegStar, FaFacebookF } from 'react-icons/fa';
-import { BsHeart } from 'react-icons/bs';
 import { BiGitCompare } from 'react-icons/bi';
 import { AiOutlineDribbble, AiOutlineTwitter } from 'react-icons/ai';
 import { FaPinterestP } from 'react-icons/fa';
 import { AiFillLinkedin } from 'react-icons/ai';
-import { AiOutlineHeart, AiFillEye, AiFillHeart } from "react-icons/ai";
+import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import { Link } from 'react-router-dom';
 import './viewsingleproduct.css'
 import ItemDetail1 from './ItemDetail1';
-import Rating from './Rating';
 import Route from './Route/Route';
 import RelatedProduct from './Related Product/RelatedProduct';
-// import ItemDetail2 from './ItemDetail2';
-// import ItemDetail3 from './ItemDetail3';
 function ViewSingleProduct() {
   const { productId } = useParams()
   const {
@@ -42,10 +37,7 @@ function ViewSingleProduct() {
   const [selectedItem, setSelectedItem] = useState(null);
   const [items, setItems] = useState([]);
   useEffect(() => {
-    // Set the initial selected item
     setSelectedItem(1);
-
-    // Fetch items from the JSON data
     const itemsFromData = thisProduct.description_review_item.map((item, index) => ({
       id: index + 1,
       ...item
@@ -58,10 +50,6 @@ function ViewSingleProduct() {
     const filteredProducts = products.filter((product) => {
       return product.category === thisProduct.category && product.id !== thisProduct.id;
     });
-
-    // Set the filtered products as the related products
-    // const limitedProducts = filteredProducts.slice(0, 4);
-
     setRelatedProducts(filteredProducts);
   }, [thisProduct]);
 

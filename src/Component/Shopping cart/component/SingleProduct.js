@@ -1,10 +1,7 @@
 import React, { useState } from 'react'
 import { CartState } from '../context/Context';
 import { Link } from 'react-router-dom'
-// import { useHistory } from 'react-router-dom';
-import Rating from './Rating';
 import { AiOutlineHeart, AiFillEye, AiFillHeart } from "react-icons/ai";
-import ViewSingleProduct from './ViewSingleProduct';
 import { FaStar, FaRegStar} from 'react-icons/fa';
 const SingleProduct = ({ prod }) => {
     const [hovered, setHovered] = useState(false);
