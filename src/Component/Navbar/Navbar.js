@@ -26,6 +26,7 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false)
   const [whillists, setwhillist] = useState(false)
   const [user, setUser] = useState(false)
+  const [search, setSearch] = useState(false)
   const dropdownHandler = () => {
     setUser(!user);
   };
@@ -34,8 +35,8 @@ const Navbar = () => {
     // setwhillist(!whillists);
     // setToggle(!toggle);
   };
-  const handleClickwhillist = () => {
-    setwhillist(!whillists);
+  const searchHandler = () => {
+    setSearch(!search);
     // setToggle(!toggle);
     // setwhillist(!whillists);
   };
@@ -82,25 +83,32 @@ const Navbar = () => {
                   </form>
                 </div>
                 <ul className='nav-ul'>
-                  <li > <Link to="/" className=' item'>home</Link></li>
-                  <li> <Link to="/shop" className=' item'>shop</Link></li>
-                  <li>
-                    <Link to="/shop" className='contact item'>collection</Link>
+                  <li > <Link to="/" onClick={() => setMobile(false)} className=' item'>home</Link></li>
+                  <li> <Link to="/shop" onClick={() => setMobile(false)} className=' item'>shop</Link></li>
+                  <li> <Link to="/shop" onClick={() => setMobile(false)} className='contact item'>collection</Link>
                   </li>
-                  <li> <Link to="/blogpage" className='skill item'>blog</Link></li>
-                  <li> <Link to="/contactform" className='sign item'>contact</Link></li>
+                  <li> <Link to="/blogpage" onClick={() => setMobile(false)} className='skill item'>blog</Link></li>
+                  <li> <Link to="/contactform" onClick={() => setMobile(false)} className='sign item'>contact</Link></li>
                 </ul>
               </div>
             </div>
           </div>
           <div className='nav-right-wrapper'>
-            <button className='search-btn'><BsSearch /></button>
+            <button className='search-btn' onClick={searchHandler}><BsSearch /></button>
             <button className='user-btn'
-            onClick={dropdownHandler}
+              onClick={dropdownHandler}
             ><BiUser /></button>
             <button className='compare-btn'><Link to="/compare" className='compare-btn-link'><span className='count'>{compare.length > 0 ? compare.length : 0}</span><BiGitCompare /></Link></button>
             <button className='heart-btn'><Link to="/wishlist" className='heart-btn-link'><BsHeart /> <span className='count'>{whillist.length > 0 ? whillist.length : 0}</span></Link></button>
             <button onClick={handleClick} className='cart-btn'><BsCart2 /><span className='count'>{cart.length > 0 ? cart.length : 0}</span></button>
+          </div>
+          <div class="wrap" style={{ display: search ? 'block' : 'none' }}>
+            <div class="search">
+              <input type="text" class="searchTerm" placeholder="What are you looking for?" />
+                <button type="submit" class="searchButton">
+                  <i class="fa fa-search"></i>
+                </button>
+            </div>
           </div>
           <div className='user-dropdown' style={{ display: user ? 'block' : 'none' }}>
             <ul>

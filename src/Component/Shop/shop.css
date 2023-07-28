@@ -186,7 +186,7 @@
 } */
 @media (max-width: 700px) {
     .shop-section .shop-container .shop-row {
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
     .shop-section .shop-container .shop-row .shop-left {
         width: 100%;
@@ -223,8 +223,8 @@
 
     .shop-section .shop-container .shop-row {
         display: flex;
-        padding-top: 80px;
-        flex-direction: column-reverse;
+        padding-top: 3px;
+        flex-direction: column;
     }
 
     .shop-section .shop-container .shop-row .shop-left {

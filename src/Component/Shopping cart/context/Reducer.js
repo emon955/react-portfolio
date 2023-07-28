@@ -17,7 +17,7 @@ export const cartReducer = (state, action) => {
     case 'CLEAR_CART':
       return {
         ...state,
-        cart: action.payload, 
+        cart: action.payload,
       };
     default:
       return state;
@@ -32,6 +32,11 @@ export const whillistReducer = (state, action) => {
       return {
         ...state,
         whillist: state.whillist.filter((c) => c.id !== action.payload.id),
+      };
+    case 'CLEAR_ WHISLIST':
+      return {
+        ...state,
+        whillist: action.payload,
       };
     default:
       return state;
