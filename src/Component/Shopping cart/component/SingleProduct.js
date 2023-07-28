@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import Rating from './Rating';
 import { AiOutlineHeart, AiFillEye, AiFillHeart } from "react-icons/ai";
 import ViewSingleProduct from './ViewSingleProduct';
+import { FaStar, FaRegStar} from 'react-icons/fa';
 const SingleProduct = ({ prod }) => {
     const [hovered, setHovered] = useState(false);
     const {
@@ -90,25 +91,32 @@ const SingleProduct = ({ prod }) => {
                     </div>
                 </div>
                 {/* {prod.imagebatch && ( */}
-                    <div className='product-image-batch'>
-                        {prod.imagebatch !== false && (
-                            <span className='pink'>
-                                {prod.imagebatch}
-                            </span>
-                        )}
-                        {prod.imagebatch2 !== "" && (
-                            <span className='pink'>
-                                {prod.imagebatch2}
-                            </span>
-                        )}
-                    </div>
+                <div className='product-image-batch'>
+                    {prod.imagebatch !== false && (
+                        <span className='pink'>
+                            {prod.imagebatch}
+                        </span>
+                    )}
+                    {prod.imagebatch2 !== "" && (
+                        <span className='pink'>
+                            {prod.imagebatch2}
+                        </span>
+                    )}
+                </div>
                 {/* )} */}
             </div>
             <div className='product-details'>
                 <div className='product-details-title'>{prod.title}</div>
 
                 <div className='product-rating'>
-                    <Rating rating={prod.rating} />
+                    {/* <Rating rating={prod.rating} /> */}
+                    {Array.from({ length: 5 }, (_, index) => {
+                        if (index < prod.rating.length && prod.rating[index]) {
+                            return <FaStar className='star_icon' key={index} />;
+                        } else {
+                            return <FaRegStar className='star_icon' key={index} />;
+                        }
+                    })}
                 </div>
                 <div className='product-price'>
                     <span>{prod.price}</span>
